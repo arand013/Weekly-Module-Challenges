@@ -16,8 +16,15 @@ function revArr(arr) {
 
 arr.reverse()
 
+console.log(arr);
+
 // arr = [4,3,2,1]
 // i = 2 
 // temp = 3
 // 2 = 4
 // 3 = 2
+
+// https://replit.com/@mattyc89/Trilogy-playground-5#index.js
+
+// to test function
+// type " node index.js " in terminal folder
