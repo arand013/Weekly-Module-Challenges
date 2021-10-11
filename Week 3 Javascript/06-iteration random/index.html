@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iteration Random</title>
+  </head>
+  <body>
+    <h1 style="text-align:center; margin-top:20%;">
+      Open the console to see a list of random numbers!
+    </h1>
+    <!-- TODO: Add JavaScript code to log 10 random numbers in the console -->
+<script>
+  // for loop will loop until its 10th time
+   for (var i = 0; i < 10; i++) {
+
+    // Generate a random number between 1 and 10
+    // Math.floor will round down, meaning we would get a number between 0 and 9, so we'll always add 1 to bump it up.
+    var num = Math.floor(Math.random() * 10) + 1;
+
+    // Display in console
+    console.log(num)
+
+    //   for (var i = 0; i < 10; i++) {
+    //   var num = Math.floor(Math.random() * 10) + 1;
+    //   console.log(num)
+    //
+   }
+
+</script>
+ 
+  </body>
+</html>
