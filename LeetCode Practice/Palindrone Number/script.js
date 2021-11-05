@@ -1,4 +1,4 @@
-//Given an integer x, return true if x is palindrome integer.
+//Given an integer x, return true if iis palindrome integer.
 
 //An integer is a palindrome when it reads the same backward as forward.
 //For example, 121 is palindrome while 123 is not.
@@ -22,23 +22,23 @@
 
 //---------------------------------
 
-var isPalindrome = function(x) {
+var isPalindrome = function(i) {
     
-    if(x < 0 || (x !==0 && x % 10 == 0))
+    if(i < 0 || (i!==0 && i % 10 == 0))
         return false;
     
-    let reverse = 0; 
+    let reverse = 0;
     
-    while (x > reverse) {
+    while (i > reverse) {
         
-        reverse = reverse * 10 + x % 10;
+        reverse = reverse * 10 + i % 10;
     
-    x = ~~(x/10);
+    i= ~~(i/10);
     }
     
-    return x === reverse || x === ~~(reverse/10); 
+    return i=== reverse || i=== ~~(reverse/10); 
 };
 
-isPalindrome(); 
+isPalindrome(41); 
 
 console.log(isPalindrome)
