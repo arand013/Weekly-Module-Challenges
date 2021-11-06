@@ -48,3 +48,5 @@ var maxArea = function(height) {
     return max;
     
 };
+
+return maxarea();
