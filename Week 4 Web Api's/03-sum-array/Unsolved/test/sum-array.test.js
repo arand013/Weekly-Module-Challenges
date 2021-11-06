@@ -1,11 +1,13 @@
 var expect = chai.expect;
 
-describe("sumArray", function() {
-  it("returns the total of all the numbers in `arr`", function() {
-    var arr = [4, 8, 15, 16, 23, 42];
+describe("addArray", function () {
+  it("returns the total of all of the number in a given `array`", function () {
 
-    var result = sumArray(arr);
+    var array = [1, 1, 1, 1];
 
-    expect(result).to.eql(108);
+    var result = arrayAdder(array);
+
+    expect(result).to.eql(4);
+
   });
 });

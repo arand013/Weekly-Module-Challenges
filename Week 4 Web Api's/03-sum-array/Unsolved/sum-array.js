@@ -1,13 +1,14 @@
-// Write code to add all the numbers in `arr` and return the total
+// Write code to add all the numbers in `array` and return the total
 
-var sumArray = function(arr) {;
-  var result = 0 
+var arrayAdder = function (array) {
 
-  for ( var i = 0; i < arr.length; i++ )
+  var result = 0;
 
-       {var currentNumber = arr[i];
-        result += currentNumber;
-}
+  for (var i = 0; i < array.length; i++) {
+    var currentNumber = array[i];
+    result += currentNumber;
+  }
 
-return result;
+  return result;
 };
+

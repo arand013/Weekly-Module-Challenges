@@ -10,3 +10,4 @@ var sumArray = function(arr) {
 
   return result;
 };
+
