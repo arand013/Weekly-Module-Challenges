@@ -1,8 +1,14 @@
-function greet(name, lastname) {
+// How do you create a private variable in Javascript ?
 
-    console.log("You Got This " + name + " " + lastname + "!" );
+function secretVariable() {
 
+    var private = "This_My_PassWord";
+
+    return function() {
+        return private
+    }
 }
 
-greet("Believe", "InYourself")
-greet("Alexander", "Aranda")
+var getPrivateVariable = secretVariable()
+
+console.log(getPrivateVariable())
