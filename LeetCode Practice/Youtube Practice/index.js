@@ -1,7 +1,8 @@
-function greet() {
+function greet(name, lastname) {
 
-    console.log("Hello Everyone");
+    console.log("You Got This " + name + " " + lastname + "!" );
 
 }
 
-greet()
+greet("Believe", "InYourself")
+greet("Alexander", "Aranda")
