@@ -41,3 +41,7 @@ for numbers that are divisible by both 3 and 5
 // 10) Repeat step 8 but, change number divisible to be 5 and display "Buzz" in this case "Klack"
 
 // 11) update and move console.log to last line, with the result and i 
+
+/// 
+// TO TEST 
+// RUN " node index.js" MUST BE IN ROOT FOLDER 
