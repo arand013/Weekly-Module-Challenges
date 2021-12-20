@@ -4,16 +4,14 @@ let add = function(act1, act2) {
     return add 
 }
 
+let subtract = function (numero1,numero2) {
+    return numero1 - numero2;
+}
 
+let mutiliply = function(number1, number2) {
+    return number1 * number2;
+}
 
-var subtract = function(num1, num2) {
-
-};
-
-var multiply = function(num1, num2) {
-
-};
-
-var divide = function(num1, num2) {
-
-};
+let divide = function(num1, num2) {
+    return num1 / num2;
+}
