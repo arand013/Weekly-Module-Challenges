@@ -14,3 +14,24 @@ body {
     --btn-width: 125px;
     --btn-height: 40px;
 }
+
+.btn {
+    position: relative;
+    background-color: #2B2D2F;
+    color: #71DFBE;
+    border: none;
+    border-radius: .125em;
+    width: var(--btn-width);
+    height: var(--btn-height);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .btn.animating {
+    background-color: transparent;
+    color: transparent;
+    user-select: none;
+    cursor: default;
+    animation: hide 0ms calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards;
+  }
