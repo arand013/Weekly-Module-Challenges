@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+:root {
+    --squish-animation-time: 500ms;
+    --progress-animation-time: 100ms;
+    --circle-animation-time: 300ms;
+    --checkmark-animation-time: 300ms;
+    --btn-width: 125px;
+    --btn-height: 40px;
+}
