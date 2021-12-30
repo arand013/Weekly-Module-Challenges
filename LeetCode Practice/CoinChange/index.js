@@ -31,7 +31,25 @@ Output: 0
 
 //PSUEDOCODE
 
-*/ 
+*/
+
+
+// TABULATION APPRAOCH 
+function coinChange(coins, amount) {
+    // Create a table to initiate Traversal of coins 
+    let table = new Array(amount + 1)
+    table.fill(0);
+    table[0] = 1;
+
+    coins.foreach(function coins() {
+        for (let i = coin; i < table.length; i++) {
+            table[i] = table[i] + table[i - coin];
+        }
+    })
+    return table[table.length - 1];
+}
+
+/* MEMORIZATION APPRAOCH
 
 
 // TABULATION APPRAOCH 
@@ -51,4 +69,4 @@ function coinChange(coins, amount) {
 
 return coinChange()
 
-
+*/
