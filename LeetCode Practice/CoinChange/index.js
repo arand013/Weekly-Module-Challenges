@@ -34,20 +34,38 @@ Output: 0
 */
 
 
-// TABULATION APPRAOCH 
+// TABULATION APPRAOCH TO Return how many unique ways there are to use the coins to make up that total.
+// function coinChange(coins, amount) {
+//     // Create a table to initiate Traversal of coins 
+//     let table = new Array(amount + 1)
+//     table.fill(0);
+//     table[0] = 1;
+
+//     coins.forEach( coin => {
+//         for (let i = coin; i < table.length; i++) {
+//             table[i] = table[i] + table[i - coin];
+//         }
+//     })
+//     return table[table.length - 1];
+// }
+
+
 function coinChange(coins, amount) {
     // Create a table to initiate Traversal of coins 
-    let table = new Array(amount + 1)
-    table.fill(0);
-    table[0] = 1;
+    let denominations = new Array(amount + 1).fill(Infinity);
+    denominations[0] = 0;
 
-    coins.foreach(function coins() {
-        for (let i = coin; i < table.length; i++) {
-            table[i] = table[i] + table[i - coin];
+    for (let coin of coins) {
+        for (let i = 0; i < denominations.length; i++) {
+            if (coin <= i) {
+                denominations[i] = Math.min(
+                    denominations[i], denominations[i - coin] + 1
+                );
+            }
         }
-    })
-    return table[table.length - 1];
-}
+    }
+    return denominations[amount] !== Infinity ? denominations[amount] : -1;
+};
 
 /* MEMORIZATION APPRAOCH
 
