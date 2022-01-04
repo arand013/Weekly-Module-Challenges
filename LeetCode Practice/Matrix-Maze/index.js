@@ -102,8 +102,10 @@ function ratPaths(matrix) {
     traversePath(0, 0)
     return !result ? [-1, -1] : result;
 }
-let maze = [[0, 0, 0, 1],
+
+// Example 1
+let oneOfManyMatrix = [[0, 0, 0, 1],
 [0, 1, 0, 1],
 [0, 1, 0, 0],
 [0, 0, 1, 0]]
-console.log(ratPath(maze))
+console.log(ratPaths(oneOfManyMatrix))
