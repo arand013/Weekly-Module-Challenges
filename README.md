@@ -1,7 +1,8 @@
 # Weekly-Module-Challenges
 ![](https://img.shields.io/badge/license-MIT%20License-blue?style=flat-square)
 ## Description
-Here lays the description
+
+This is where I have practice templates of fun creative ideas!!! Aim to build a skill and see what you can create! 
 ## Table of Contents
 * [Work](#work)
 * [Usage](#usage)
