@@ -1,5 +1,6 @@
 /* 
-iven a square matrix, calculate the absolute difference between the sums of its diagonals.
+iven a square matrix, calculate the absolute 
+difference between the sums of its diagonals.
 
 For example, the square matrix  is shown below:
 
@@ -89,9 +90,38 @@ function readLine() {
  * The function is expected to return an INTEGER.
  * The function accepts 2D_INTEGER_ARRAY arr as parameter.
  */
+/*
 
+// UNDERSTAND
+
+GOAL: return a difference of 2 diagnoal sums 
+
+- read the matrix to see #'s given 
+- locate and define positions 
+- initiate variables
+- have row 1 col 1 pos i ( The left-to-right diagonal )
+- have row 1 col 3 pos j ( The right to left diagonal )
+- Must add the diagonal sums 
+- return ( Their absolute difference i & j )
+
+
+// DIAGRAM
+
+1 2 3          1                     3
+4 5 6   ---> +   5      ---> +     5    ----> 16 - 15 = |1|
+7 8 9               9           7
+                    =           =
+                    16          15
+
+// PSUEDOCODE
+
+ */
+// PSUEDOCODE
+// CODE
+// Create a function to add diagnols then return the absolute 
+// differenece w/ paramters of a given array / matrix
 function diagonalDifference(arr) {
-    // Write your code here
+    // initaite variables 
 
 }
 
