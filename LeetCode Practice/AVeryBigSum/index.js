@@ -35,7 +35,9 @@ function aVeryBigSum(ar) {
     //1: init variables; result [] to attach return output; 
     let result = 0
 
-    //2: Write a loop; for to init math. max to add a number in the array to the result array
+    //2: Write a loop; for to init (let i = 0; i < ar.length; i++) to 
+    //   add a number in the array(along with i values in the array) to 
+    //   the result array (i is = to numbers in a given array)
     for(let i = 0; i < ar.length; i++) {
         result += ar[i];
     }
