@@ -119,6 +119,7 @@ GOAL: return a difference of 2 diagnoal sums
  */
 // PSUEDOCODE
 // CODE
+
 // Create a function to add diagnols then return the absolute 
 // differenece w/ paramters of a given array / matrix
 function diagonalDifference(arr) {
@@ -146,6 +147,7 @@ function diagonalDifference(arr) {
      // return ( The absolute difference )
      return Math.abs(d1 - d2);
 }
+
 
 
 
