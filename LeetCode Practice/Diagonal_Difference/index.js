@@ -63,6 +63,7 @@ Note: |x| is the absolute value of x
 'use strict';
 
 const fs = require('fs');
+const { arrayBuffer } = require('node:stream/consumers');
 
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
@@ -70,11 +71,11 @@ process.stdin.setEncoding('utf-8');
 let inputString = '';
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
+process.stdin.on('data', function (inputStdin) {
     inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
+process.stdin.on('end', function () {
     inputString = inputString.split('\n');
 
     main();
@@ -121,9 +122,32 @@ GOAL: return a difference of 2 diagnoal sums
 // Create a function to add diagnols then return the absolute 
 // differenece w/ paramters of a given array / matrix
 function diagonalDifference(arr) {
-    // initaite variables 
+    // initiate variables; d1 set = 0; d2 set = 0; n = total length of array
+    let d1 = 0;
+    let d2 = 0;
+    let n = arr.length; 
 
+    // create a loop to iterate (i /d1) position array 
+
+    for(let i = 0; i < n; i++) {
+ // create anpther loop to iterate (j /d2) position array 
+        for(let j = 0; j < n; j++) {
+            // finding sum of primary diagonal
+            // add those diagnol positions 
+            if(i === j) {
+                d1 += arr[i][j];
+            }
+            if(i+j === n -1) {
+                d2 += arr[i][j];
+        }
+
+    }
 }
+     // return ( The absolute difference )
+     return Math.abs(d1 - d2);
+}
+
+
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
