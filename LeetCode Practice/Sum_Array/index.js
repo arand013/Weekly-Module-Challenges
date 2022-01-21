@@ -13,6 +13,8 @@ Output : 6
 Input : arr[] = {15, 12, 13, 10}
 Output : 50
 
+
+
 */
 
 
