@@ -39,24 +39,66 @@ function readLine() {
  * GOAL: Return an output that contains the  array (INTEGER_ARRAY)
  * in the shifted postiions. 
  * 
- * Base case: array 
- * Edge case: 
+ * Base cases: 
+ * 1) array max size 100 values inside; 
+ * 2) rotations are less than array.length
+ * 3) given int for [d] && int for [array]
+ * 
+ * 
+ * Edge cases: 
+ * 1) ? can array take - integers 
+ * 2) ? do you have to input left rotations; 
+ * 3) ? or take away right rotations
+ * 4) ? max size of values inside
+ * 
  * constraints: 
  * time complexity: O(n) (1 loop to iterate array )
  * space complecity: O(n) (as data grows so does space equally )
  * 
+ * DIAGRAM 
+ *  EX 1: 
+ *  INPUT               OUTPUT
+ *  d = 4               
+ *  1 2 3 4 5     - >   5 1 2 3 4
  * 
- * Complete the 'rotateLeft' function below.
- *
- * The function is expected to return an INTEGER_ARRAY.
- * The function accepts following parameters:
- *  1. INTEGER d
- *  2. INTEGER_ARRAY arr
+ * [1, 2, 3, 4, 5] 1-> [2, 3, 4, 5, 1] 2-> [3, 4, 5, 1, 2] 3-> 
+ * [4, 5, 1, 2, 3] 4-> RESULT[5, 1, 2, 3, 4]
+ * 
+ *  EX 2: 
+ *  INPUT               OUTPUT
+ *  d = 10               
+ *  1 2 3 4 5     - >   N/A
+ * 
+ *  EX 3: 
+ *  INPUT               OUTPUT
+ *  d = 2               
+ *  1, 2, -3, 4, -5     - >   -3, 4, -5, 1, 2
+ * 
+ * [1, 2, -3, 4, -5] 1-> [2, -3, 4, -5, 1]  2-> 
+ * RESULT [-3, 4, -5, 1, 2]
+ * 
+ * 
+ * PSUEDOCODE 
+ * 1: Create a function called rotateLeft w/ paramters ( d, arr)
+ * 2: init variables 
+ * 3: write loop to iterate array to the left to a maxmium of d
+ * 4: Stopping when d is reached 
+ * 5: Return the output array / call the function 
+ * 
  */
 
 
 function rotateLeft(d, arr) {
-    // Write your code here
+    // init vaiables (none needed)
+
+    // write a loop w/ parameter d ( to push array( but before that shift the arr to left d--))
+   while(d) {
+       arr.push(arr.shift());
+       d--;
+   }
+    
+    // Return the output array
+    return arr;
 
 }
 
