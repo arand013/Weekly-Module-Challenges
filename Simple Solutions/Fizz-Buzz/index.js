@@ -20,7 +20,7 @@ for numbers that are divisible by both 3 and 5
 //   }
 
   for (let i = 1; i <= 23; i++) {
-      let result = "";
+      let result = ""; 
       if (i % 3 == 0) result += "Click";
       if (i % 5 == 0) result += "Klack";
       console.log(result || i);
@@ -45,3 +45,4 @@ for numbers that are divisible by both 3 and 5
 /// 
 // TO TEST 
 // RUN " node index.js" MUST BE IN ROOT FOLDER 
+
