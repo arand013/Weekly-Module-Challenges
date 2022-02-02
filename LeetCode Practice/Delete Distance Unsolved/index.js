@@ -82,18 +82,41 @@ PSUEDOCODE:
 
  var minDistance = function(word1, word2) {
 
-    let xs = word1.length;
-    let ys = word2.length;
-    let result = new Array(xs + 1).fill().map( _ => new Array(ys +1).fill(0));
+    let result = 0; 
+    let m = word1.length;
+    let n = word2.length;
+    let dp = []; 
 
-    for( let x = 1; x <= xs; x++ ) result[x][0] = r;
-    for( let y = 1; y <= ys; y++ ) result[0][y] = y;
-    for( let x = 1; x <= xs; x++ ) {
-        for(let y = 1; y <= ys; y++) {
-            result[x][y] = word1[x - 1] === word2[y - 1]
-            ? result[x - 1][y - 1]
-            : 1 + Math.min(result[x - 1][y], result[x][ y - 1]);
+    for(let i = 0; i < m+1; i++) {
+        dp[i] = new Array(n+1).fill(0);
+
+    }
+
+    for(let i = 1; i <= m; i++) {
+        for(let j = 1; j <= n; j++ ) {
+            dp[i][j] = (word1.charAt(i-1) == word2.charAt(j-1)) 
+            ? dp[i-1][j-1]+1 : Math.max(dp[i-1][j], dp[i][j-1])
         }
     }
-    return result[xs][ys]; 
+    return m+n-2*dp[m][n]
+
 }; 
+
+
+/*
+ ```var minDistance = function(word1, word2) {
+  var res=0;
+  var m=word1.length, n=word2.length;
+  var dp=[];
+  for(let i=0; i<m+1; i++){
+    dp[i]= new Array(n+1).fill(0);
+  }
+  for(let i=1; i<=m; i++){
+      for(let j=1; j<=n; j++){
+          dp[i][j]= (word1.charAt(i-1) == word2.charAt(j-1))? dp[i-1][j-1]+1 : Math.max(dp[i-1][j], dp[i][j-1])
+      }
+  }
+  return m+n-2*dp[m][n]
+};
+
+*/
