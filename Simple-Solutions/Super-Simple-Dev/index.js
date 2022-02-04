@@ -17,3 +17,12 @@ let year = "2022"
 console.log(month, dayOfMonth, year);
 
 
+// Save the result of 4 + 5 * 3 in a variable 
+// and console.log the result. Do the same with 
+// the result of (4 + 5) * 3. Notice the rules of math 
+// are the same in programming (brackets first, then multiply, then add).
+
+let maths = (4 + 5 * 3); 
+let maths2 = (4 + 5) * 3;
+
+console.log(maths, maths2); 
