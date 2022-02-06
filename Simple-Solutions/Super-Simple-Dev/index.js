@@ -22,19 +22,19 @@ console.log(month, dayOfMonth, year);
 // the result of (4 + 5) * 3. Notice the rules of math 
 // are the same in programming (brackets first, then multiply, then add).
 
-let maths = (4 + 5 * 3); 
+let maths = (4 + 5 * 3);
 let maths2 = (4 + 5) * 3;
 
-console.log(maths, maths2); 
+console.log(maths, maths2);
 
 /* 3) Create a variable age that saves your age (e.g. let age = 25;). 
 *  Create another variable: let message = 'I am ' + age + ' years old'; 
 *  What is the type of the message variable?
 */
 
-let age = 23 
+let age = 23
 let days = ' with 63 days old'
-let message = "I am " + age + ' years' + days; 
+let message = "I am " + age + ' years' + days;
 console.log(message);
 
 // 4) Use Javascript to add a button 
@@ -50,6 +50,14 @@ console.log(message);
 function greeting(firstName) {
     console.log('Hello ' + firstName);
 
-
 }
-return greeting("Amazing Person!");
+greeting("Amazing Person!");
+// 6) Write a function named toUpper that converts 1 string parameter (str)
+//    to uppercase and console.log the result. Use Google to find the code for 
+//    converting a string to uppercase in Javascript.
+
+function toUpper(thisString) {
+    // to upper case whole word
+    console.log(thisString.toUpperCase());
+}
+return toUpper('simon'); 
