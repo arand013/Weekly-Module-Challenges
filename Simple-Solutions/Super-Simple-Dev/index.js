@@ -52,4 +52,4 @@ function greeting(firstName) {
 
 
 }
-return greeting("Jim");
+return greeting("Amazing Person!");
