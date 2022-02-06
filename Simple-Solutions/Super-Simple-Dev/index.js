@@ -59,5 +59,8 @@ greeting("Amazing Person!");
 function toUpper(thisString) {
     // to upper case whole word
     console.log(thisString.toUpperCase());
+
+    // to upper case the 1st letter Only
+    console.log(thisString.charAt(0).toUpperCase() + thisString.slice(1));
 }
 return toUpper('simon'); 
