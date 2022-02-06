@@ -35,4 +35,4 @@ console.log(maths, maths2);
 let age = 23 
 let days = ' with 62 days old'
 let message = "I am " + age + ' years' + days; 
-console.log(typeof message);
+console.log(message);
