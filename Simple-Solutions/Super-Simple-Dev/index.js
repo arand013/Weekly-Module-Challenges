@@ -36,3 +36,10 @@ let age = 23
 let days = ' with 62 days old'
 let message = "I am " + age + ' years' + days; 
 console.log(message);
+
+// 4) Use Javascript to add a button 
+// containing the text "Click Me" inside the button.
+
+let button = document.createElement('button');
+button.inntertext = 'Click me! plz';
+doucment.body.appendChild(button);
