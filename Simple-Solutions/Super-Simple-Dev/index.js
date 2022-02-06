@@ -33,13 +33,23 @@ console.log(maths, maths2);
 */
 
 let age = 23 
-let days = ' with 62 days old'
+let days = ' with 63 days old'
 let message = "I am " + age + ' years' + days; 
 console.log(message);
 
 // 4) Use Javascript to add a button 
 // containing the text "Click Me" inside the button.
 
-let button = document.createElement('button');
-button.inntertext = 'Click me! plz';
-doucment.body.appendChild(button);
+// let button = document.createElement('button');
+// button.inntertext = 'Click me! plz';
+// doucment.body.appendChild(button);
+
+// 5)Create a function named greeting that takes 
+// 1 parameter firstName and uses it to console.log a message saying "hello".
+
+function greeting(firstName) {
+    console.log('Hello ' + firstName);
+
+
+}
+return greeting("Amazing Person");
