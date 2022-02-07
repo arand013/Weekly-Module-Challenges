@@ -63,4 +63,34 @@ function toUpper(thisString) {
     // to upper case the 1st letter Only
     console.log(thisString.charAt(0).toUpperCase() + thisString.slice(1));
 }
-return toUpper('simon'); 
+toUpper('simon'); 
+
+/* 7) Write a function that converts a parameter length from inches to centimeters.
+*/ 
+    function inchToCentimeters(length){
+         console.log( length * 2.54);
+    }
+    inchToCentimeters(5);
+
+/* 8) Write a function toUpper that takes 1 parameter, 
+an array of strings, and console.logs a new array with 
+all the strings capitalized. (Hint: create a new array and push onto 
+the array. Use google to learn the code for converting a string to 
+uppercase in Javascript.
+
+Example: toUpper(['hello', 'world']); will console.log(['HELLO', 'WORLD'])
+*/
+
+    function toUpperAll(strings){ 
+        let result = [];
+
+        for(let i = 0; i < strings.length; i++){
+       
+            result.push(strings.toUpperCase());
+        };
+        console.log(result);
+    };
+    return toUpperAll('nasty','hello');
+    
+
+    // 
