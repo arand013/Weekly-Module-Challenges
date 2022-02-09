@@ -14,6 +14,24 @@
     <svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30">
      <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
    </svg>
-  </div>
+  </div> 
+  
+<div>
+
+ 
+  <button class="btn" data-btn€ id='todo-button' onclick="changeToComplete()">Try it</button>
+
+<script>
+function changeToComplete() {
+
+  let button = document.getElementById('todo-button');
+  button.innerText = 'U Did IT!!!'
+  document.body.appendChild(button);
+}
+</script>
+
+
+</div>
+ 
 </body>
 </html>
