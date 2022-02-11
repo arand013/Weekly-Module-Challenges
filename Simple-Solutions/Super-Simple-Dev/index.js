@@ -93,4 +93,30 @@ Example: toUpper(['hello', 'world']); will console.log(['HELLO', 'WORLD'])
     return toUpperAll('nasty','hello');
     
 
-    // 
+/*
+Write a function cartTotal that takes an array of objects cartArray 
+where each object contains a name, price, and quantity. 
+console.log the total price of the items in the cart. For example:
+EX 1: 
+
+cartTotal([
+  { name: 'Apple', price: 4, quantity: 2 },
+  { name: 'Orange', price: 3, quantity: 3 }
+]);
+
+*/
+
+function cartTotal ( cartArray ) { 
+    let cartArray = 0; 
+
+    cartArray = map(function (item) {
+        total = total + item.price * item.quantity;
+      });
+    
+      console.log(total);
+    
+    cartTotal([
+      { name: 'Apple', price: 4, quantity: 2 },
+      { name: 'Orange', price: 3, quantity: 3 }
+    ]);
+}; 
