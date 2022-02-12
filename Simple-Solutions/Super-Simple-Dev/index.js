@@ -116,7 +116,7 @@ function cartTotal ( cartArray ) {
       console.log(total);
     
     cartTotal([
-      { name: 'Apple', price: 4, quantity: 2 },
+      { name: 'Amazing ', price: 4, quantity: 2 },
       { name: 'Orange', price: 3, quantity: 3 }
     ]);
 }; 
