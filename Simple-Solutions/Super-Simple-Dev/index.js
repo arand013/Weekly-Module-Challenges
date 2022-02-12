@@ -117,6 +117,6 @@ function cartTotal ( cartArray ) {
     
     cartTotal([
       { name: 'Amazing ', price: 4, quantity: 2 },
-      { name: 'Orange', price: 3, quantity: 3 }
+      { name: 'Get UP', price: 3, quantity: 3 }
     ]);
 }; 
