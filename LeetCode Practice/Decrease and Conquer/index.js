@@ -28,6 +28,7 @@ function numberOfOnes(arr) {
     let start = 0;
     let end = arr.length;
     let midpoint;
+    
 
 
 }
