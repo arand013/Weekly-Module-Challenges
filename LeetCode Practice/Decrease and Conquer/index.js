@@ -36,6 +36,11 @@ function numberOfOnes(arr) {
 
 
     // CALLBACK 
+    //( Return total #'s in array and (-) subtract it 
+    //  from the the count (start) )
+
+    return arr.length - start;
+
 
 
 }
