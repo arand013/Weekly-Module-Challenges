@@ -29,6 +29,13 @@ function numberOfOnes(arr) {
     let end = arr.length;
     let midpoint;
     
+    // LOOP
+    while(start < end) {
+
+    }
+
+
+    // CALLBACK 
 
 
 }
