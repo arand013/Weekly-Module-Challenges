@@ -31,18 +31,19 @@ function numberOfOnes(arr) {
     
     // LOOP
     while(start < end) {
+        midpoint = parseInt(start + parseInt((end - start) / 2));
 
+        if(arr[midpoint] === 0) {
+            start = midpoint + 1;
+        }
+        else {
+            end = midpoint; 
+        }
     }
-
-
     // CALLBACK 
     //( Return total #'s in array and (-) subtract it 
     //  from the the count (start) )
-
     return arr.length - start;
-
-
-
 }
   
 
