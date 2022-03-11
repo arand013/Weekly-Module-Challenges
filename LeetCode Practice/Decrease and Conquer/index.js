@@ -74,7 +74,16 @@ function numberOfOnes(arr) {
 
 function closestValue(arr, target) {
     // VARIABLES
+    let start = 0;
+    let closest = Infinity; 
+    let value = null; 
+    let end = arr.length - 1; 
 
+    // LOOP
+    while(start <= end) {
+
+    }
+    return value;
     //CALLBACK
 
   }
