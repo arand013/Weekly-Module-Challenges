@@ -127,46 +127,25 @@ function closestValue(arr, target) {
 
 
 function squareRoot(i) {
-    // 
+    // CONSTRAINT
+    if (i === 0 || i === 0) {
+        return i;
+    }
+
+    // VARIABLES ( input i, output result, )
+    let low = 0;
+    let high = i;
+    let result = 0;
+    let sq = 0;
+    let mid = 0;
+
+    // LOOP
+
+
+
+    //CALLBACK
 
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-//     if (i === 1 || i === 0) {
-//       return i;
-//     }
-  
-//     let low = 0;
-//     let high = i;
-//     let result = 0;
-//     let sq = 0;
-//     let mid = 0;
-//     while (low <= high) {
-//       mid = (low + high) / 2;
-//       sq = mid * mid;
-//       if (sq == i) {
-//         return mid;
-//       } else if (sq < i) {
-//         low = mid + .0000001;
-//         result = mid;
-//       } else {
-//         high = mid - .0000001;
-//       }
-//     }
-//     return result.toFixed(6);
-//   }
-  
   
