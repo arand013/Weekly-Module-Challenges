@@ -184,3 +184,8 @@ function squareRoot(i) {
  *
  */
 
+
+function greaterValues(arr, target) {
+    // YOUR WORK HERE
+}  
+
