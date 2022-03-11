@@ -75,11 +75,7 @@ function numberOfOnes(arr) {
 function closestValue(arr, target) {
     // VARIABLES
 
-
-    // LOOP
-
-
     //CALLBACK
-  
+
   }
   
