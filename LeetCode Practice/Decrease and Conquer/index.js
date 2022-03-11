@@ -94,8 +94,7 @@ function closestValue(arr, target) {
             end = midpoint - 1;
         }
     }
-    return value;
     //CALLBACK
-
+    return value;
   }
   
