@@ -81,7 +81,13 @@ function closestValue(arr, target) {
 
     // LOOP
     while(start <= end) {
-
+        let midpoint = parseInt(start + parseInt((end - start) / 2));
+        let difference = Math.abs(target - arr[midpoint]);
+        if (difference < closest) {
+            closest = difference;
+            value = arr[midpoint];
+        }
+  
     }
     return value;
     //CALLBACK
