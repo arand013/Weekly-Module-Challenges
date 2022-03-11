@@ -98,3 +98,75 @@ function closestValue(arr, target) {
     return value;
   }
   
+
+////////////////////////////////////////////////////////////
+//             QUESTION 3
+
+
+/*
+ * ## Square Root
+ *
+ * *Given an positive integer, find the square root.*
+ *
+ * **Parameters**
+ * Input: value {Integer}
+ * Output: {Float}
+ *
+ * **Constraints**
+ * Do not use a native built in method.
+ * Ensure the result is accurate to 6 decimal places (0.000001)
+ *
+ * Time: O(logN)
+ * Space: O(1)
+ *
+ * **Examples**
+ * `4 --> 2.0`
+ * `98 --> 9.899495`
+ * `14856 --> 121.885192
+ */
+
+
+function squareRoot(i) {
+    // 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+//     if (i === 1 || i === 0) {
+//       return i;
+//     }
+  
+//     let low = 0;
+//     let high = i;
+//     let result = 0;
+//     let sq = 0;
+//     let mid = 0;
+//     while (low <= high) {
+//       mid = (low + high) / 2;
+//       sq = mid * mid;
+//       if (sq == i) {
+//         return mid;
+//       } else if (sq < i) {
+//         low = mid + .0000001;
+//         result = mid;
+//       } else {
+//         high = mid - .0000001;
+//       }
+//     }
+//     return result.toFixed(6);
+//   }
+  
+  
