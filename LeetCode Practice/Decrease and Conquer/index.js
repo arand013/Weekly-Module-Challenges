@@ -87,7 +87,12 @@ function closestValue(arr, target) {
             closest = difference;
             value = arr[midpoint];
         }
-  
+        if(arr[midpoint] < target) {
+            start = midpoint + 1;
+        }
+        else { 
+            end = midpoint - 1;
+        }
     }
     return value;
     //CALLBACK
