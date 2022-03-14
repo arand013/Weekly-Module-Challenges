@@ -193,12 +193,39 @@ function greaterValues(arr, target) {
 
     
     // LOOP
+    while( start < end) {
+                            //   EX:           10 - 0 / 2 = 5 this is the midpoint of the array
+        midpoint = parseInt(start + parseInt((end - start) / 2));
+
+        // if the array (parameter MIDPOINT) is less than or = to target LOOP
+        if(arr[midpoint] <= target) {
+           // 0 = 5 + 1
+            start = midpoint + 1;
+        } else {
+            end = midpoint;
+        }
+    }
 
 
     // CALLBACK 
-
+    return arr.length - start;
     
 }  
 
-
+// function greaterValues(arr, target) {
+//     // YOUR WORK HERE
+  
+//     let start = 0;
+//     let end = arr.length;
+//     let midpoint;
+//     while (start < end) {
+//       midpoint = parseInt(start + parseInt((end - start) / 2));
+//       if (arr[midpoint] <= target) {
+//         start = midpoint + 1;
+//       } else {
+//         end = midpoint;
+//       }
+//     }
+//     return arr.length - start;
+//   }
 
