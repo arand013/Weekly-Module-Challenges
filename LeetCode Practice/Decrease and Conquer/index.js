@@ -187,6 +187,9 @@ function squareRoot(i) {
 
 function greaterValues(arr, target) {
     // VARIABLES
+    let start = 0; 
+    let end = arr.length;
+    let midpoint;
 
     
     // LOOP
@@ -196,4 +199,6 @@ function greaterValues(arr, target) {
 
     
 }  
+
+
 
