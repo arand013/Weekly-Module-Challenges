@@ -14,5 +14,12 @@ contract thisGame {
         string lastName;
     }
 
+    function addPlayer(string memory firstName, string memory lastName) public {
+        players[msg.sender] = Player(msg.sender, Level.Advanced, firstName, lastName);
+        playerCount += 1;
+    }
 
+    function getPlayerLevel(address playerAddress) public view returns(Level){
+        return players[playerAddress].playerLevel;
+    }
 }
