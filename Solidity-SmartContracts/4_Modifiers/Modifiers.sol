@@ -16,5 +16,22 @@ contract ModifierToken {
         _;
     }
 
-  
+    modifier balanceGreaterThanAmount(uint amount) {
+          require(amount <= balances[msg.sender], "Insufficient balance.");
+        _;
+    }
+
+    constructor() {
+        minter = msg.sender;
+    }
+
+    function mint(address receiver, uint amount) public onlyMinter amountGreaterThan(amount){
+        balances[receiver] += amount; 
+    }
+
+    function send(address receiver, uint amount) public balanceGreaterThanAmount(amount){ 
+        balances[msg.sender] -= amount; 
+        balances[receiver] += amount; 
+        emit Sent(msg.sender, receiver, amount);
+    }
 }
