@@ -6,5 +6,15 @@ contract ModifierToken {
 
     event Sent(address from, address to, uint amount);
 
+    modifier onlyMinter {
+        require(msg.sender == minter,"Only the minter can call this function");
+        _;
+    }
 
+    modifier amountGreaterThan(uint amount) {
+           require(amount < 1e60);
+        _;
+    }
+
+  
 }
