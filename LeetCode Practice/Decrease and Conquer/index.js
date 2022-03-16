@@ -212,20 +212,31 @@ function greaterValues(arr, target) {
     
 }  
 
-// function greaterValues(arr, target) {
-//     // YOUR WORK HERE
-  
-//     let start = 0;
-//     let end = arr.length;
-//     let midpoint;
-//     while (start < end) {
-//       midpoint = parseInt(start + parseInt((end - start) / 2));
-//       if (arr[midpoint] <= target) {
-//         start = midpoint + 1;
-//       } else {
-//         end = midpoint;
-//       }
-//     }
-//     return arr.length - start;
-//   }
 
+////////////////////////////////////////////////////////////
+//             QUESTION 5
+
+
+
+/*
+ * ## Sorted and Rotated Array [Extra Credit]
+ * *Given a array that is sorted and rotated, find out if a target value exists in the array.*
+ *
+ * An sorted array is rotated by taking an unknown amount of values from the beginning and placing it at the end.
+ *
+ * `[3, 4, 5, 1, 2]` is rotated left by 2.
+ * `[99, 14, 25, 78, 93]` is rotated to the right by 1.
+ *
+ * **Parameters**
+ * Input: arr {Array}
+ * Output: {Boolean}
+ *
+ * **Constraints**
+ * Time: O(logN)
+ * Space: O(1)
+ *
+ * **Examples**
+ * `[35, 46, 79, 102, 1, 14, 29, 31], 46 --> true`
+ * `[35, 46, 79, 102, 1, 14, 29, 31], 47 --> false`
+ * `[7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 9 --> true`
+ */
