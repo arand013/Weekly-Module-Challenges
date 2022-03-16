@@ -240,3 +240,9 @@ function greaterValues(arr, target) {
  * `[35, 46, 79, 102, 1, 14, 29, 31], 47 --> false`
  * `[7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 9 --> true`
  */
+
+
+function rotatedArraySearch(nums, target) {
+    // YOUR WORK HERE
+  }
+  
