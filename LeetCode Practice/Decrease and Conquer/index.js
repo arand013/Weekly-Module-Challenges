@@ -280,25 +280,11 @@ function rotatedArraySearch(nums, target) {
  * `846, 908--> 768168`
  */
 
+function multiplicationRussianPeasant(a,b) {
+
+}
 
 
-// function multiplicationRussianPeasant(a, b) {
-//     // YOUR WORK HERE
-//     let finalSum = 0;
-//     while (b >= 1) {
-//       if (b % 2 != 0) {
-//         finalSum += a;
-//       }
-//       if (b === 1) {
-//         break;
-//       }
-//       a *= 2
-//       b = parseInt(b / 2);
-//     }
-//     return finalSum;
-  
-  
-//   }
   
   
   
