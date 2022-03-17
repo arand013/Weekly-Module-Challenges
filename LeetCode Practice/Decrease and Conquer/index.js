@@ -282,9 +282,30 @@ function rotatedArraySearch(nums, target) {
 
 function multiplicationRussianPeasant(a,b) {
 
+    // VARIABLES
+    let finalSum = 0;
+
+    // LOOP
+    while(b >= 1){ 
+        if(b % 2 != 0) { 
+            finalSum += a;
+        }
+        if (b === 1) {
+            break;
+        }
+        a *= 2
+        b = parseInt(b / 2);
+    }
+
+    // CALLBACK
+    return finalSum;
 }
 
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//                          TEST CODE ( DO NOT TOUCH )
   
   
   
