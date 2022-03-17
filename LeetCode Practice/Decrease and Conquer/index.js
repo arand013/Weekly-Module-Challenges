@@ -128,7 +128,7 @@ function closestValue(arr, target) {
 
 function squareRoot(i) {
     // CONSTRAINT
-    if (i === 0 || i === 0) {
+    if (i === 1 || i === 0) {
         return i;
     }
 
@@ -144,9 +144,9 @@ function squareRoot(i) {
         mid = (low + high) / 2;
         sq = mid * mid;
 
-        if (sq == 1) {
+        if (sq == i) {
             return mid;
-        } else if (sq < 1){
+        } else if (sq < i){
             low = mid + .0000001;
             result = mid;
         } else {
@@ -309,3 +309,25 @@ function multiplicationRussianPeasant(a,b) {
   
   
   
+let testCount;
+
+console.log('Number of Ones Tests');
+testCount = [0, 0];
+
+assert(testCount, 'should return correct number of ones for array with zeroes and ones', () => {
+  let example = numberOfOnes([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]);
+  return example !== undefined && example === 8;
+});
+
+assert(testCount, 'should return correct number of ones for array with all zeroes', () => {
+  let example = numberOfOnes([0, 0, 0]);
+  return example !== undefined && example === 0;
+});
+
+assert(testCount, 'should return correct number of ones for array with all ones', () => {
+  let example = numberOfOnes([1, 1, 1]);
+  return example !== undefined && example === 3;
+});
+
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
