@@ -401,3 +401,9 @@ assert(testCount, 'returns true when target is in the array', () => {
   let example = rotatedArraySearch([35, 46, 79, 102, 1, 14, 29, 31], 46);
   return example !== undefined && example === true;
 });
+
+assert(testCount, 'returns false when target is not in the array', () => {
+  let example = rotatedArraySearch([35, 46, 79, 102, 1, 14, 29, 31], 47);
+  return example !== undefined && example === false;
+});
+
