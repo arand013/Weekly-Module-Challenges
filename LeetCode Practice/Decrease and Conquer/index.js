@@ -411,3 +411,11 @@ assert(testCount, 'returns true when target is the first number in the array', (
   let example = rotatedArraySearch([7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 7);
   return example !== undefined && example === true;
 });
+
+assert(testCount, 'returns true when target is the last number in the array', () => {
+  let example = rotatedArraySearch([7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 6);
+  return example !== undefined && example === true;
+});
+
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
