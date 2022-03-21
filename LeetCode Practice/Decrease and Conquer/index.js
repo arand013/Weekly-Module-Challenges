@@ -331,3 +331,24 @@ assert(testCount, 'should return correct number of ones for array with all ones'
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
+
+console.log('Closest Value Tests');
+testCount = [0, 0];
+
+assert(testCount, 'should return correct closest value for number in the middle range', () => {
+  let example = closestValue([1, 2, 3, 5, 5, 7, 9, 10, 11], 6);
+  return example !== undefined && example === 5;
+});
+
+assert(testCount, 'should return closest value for highest number', () => {
+  let example = closestValue([1, 2, 3], 8);
+  return example !== undefined && example === 3;
+});
+
+assert(testCount, 'should return closest value for lowest number', () => {
+  let example = closestValue([-2, -1, 0], -5);
+  return example !== undefined && example === -2;
+});
+
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
