@@ -419,3 +419,6 @@ assert(testCount, 'returns true when target is the last number in the array', ()
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
+
+console.log('Multiplication Russian Tests');
+testCount = [0, 0];
