@@ -422,3 +422,9 @@ console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
 console.log('Multiplication Russian Tests');
 testCount = [0, 0];
+
+assert(testCount, 'returns correct value for two integers', () => {
+  let example = multiplicationRussianPeasant(487, 734);
+  return example !== undefined && example === 357458;
+});
+
