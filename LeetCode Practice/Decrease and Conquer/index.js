@@ -393,3 +393,11 @@ assert(testCount, 'should return greater values for number less than least in th
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
+
+console.log('Rotated Sorted Array Tests');
+testCount = [0, 0];
+
+assert(testCount, 'returns true when target is in the array', () => {
+  let example = rotatedArraySearch([35, 46, 79, 102, 1, 14, 29, 31], 46);
+  return example !== undefined && example === true;
+});
