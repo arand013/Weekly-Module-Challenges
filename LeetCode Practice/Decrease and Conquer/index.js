@@ -466,3 +466,9 @@ function arraysEqual(arr1, arr2) {
 // input: test {Function} - performs a set of operations and returns a boolean
 //        indicating if test passed
 // output: {undefined}
+function assert(count, name, test) {
+  if (!count || !Array.isArray(count) || count.length !== 2) {
+    count = [0, '*'];
+  } else {
+    count[1]++;
+  }
