@@ -458,3 +458,11 @@ function arraysEqual(arr1, arr2) {
 }
 
 
+
+// custom assert function to handle tests
+// input: count {Array} - keeps track out how many tests pass and how many total
+//        in the form of a two item array i.e., [0, 0]
+// input: name {String} - describes the test
+// input: test {Function} - performs a set of operations and returns a boolean
+//        indicating if test passed
+// output: {undefined}
