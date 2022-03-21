@@ -352,3 +352,23 @@ assert(testCount, 'should return closest value for lowest number', () => {
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
+console.log('Square Root Tests');
+testCount = [0, 0];
+
+assert(testCount, 'should return correct square root for number < 10', () => {
+  let example = squareRoot(4);
+  return example !== undefined && example === 2.0;
+});
+
+assert(testCount, 'should return correct square root for number between 10 and 100', () => {
+  let example = squareRoot(98);
+  return example !== undefined && parseFloat(example) === 9.899495;
+});
+
+assert(testCount, 'should return correct square root for number over 10,000', () => {
+  let example = squareRoot(14856);
+  return example !== undefined && parseFloat(example) === 121.885192;
+});
+
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
