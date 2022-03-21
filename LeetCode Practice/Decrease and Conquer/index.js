@@ -372,3 +372,24 @@ assert(testCount, 'should return correct square root for number over 10,000', ()
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
+
+console.log('Greater Values Tests');
+testCount = [0, 0];
+
+assert(testCount, 'should return greater values for number in the middle of the array', () => {
+  let example = greaterValues([1, 2, 3, 5, 5, 7, 9, 10, 11], 5);
+  return example !== undefined && example === 4;
+});
+
+assert(testCount, 'should return 0 for number greater than largest in the array', () => {
+  let example = greaterValues([1, 2, 3], 4);
+  return example !== undefined && example === 0;
+});
+
+assert(testCount, 'should return greater values for number less than least in the array', () => {
+  let example = greaterValues([1, 10, 22, 59, 67, 72, 100], -2);
+  return example !== undefined && example === 7;
+});
+
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
