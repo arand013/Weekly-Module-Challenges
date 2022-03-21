@@ -472,3 +472,14 @@ function assert(count, name, test) {
   } else {
     count[1]++;
   }
+
+  let pass = 'false';
+  let errMsg = null;
+  try {
+    if (test()) {
+      pass = ' true';
+      count[0]++;
+    }
+  } catch (e) {
+    errMsg = e;
+  }
