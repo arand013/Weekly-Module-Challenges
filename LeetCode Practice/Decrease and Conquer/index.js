@@ -407,3 +407,7 @@ assert(testCount, 'returns false when target is not in the array', () => {
   return example !== undefined && example === false;
 });
 
+assert(testCount, 'returns true when target is the first number in the array', () => {
+  let example = rotatedArraySearch([7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 7);
+  return example !== undefined && example === true;
+});
