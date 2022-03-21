@@ -428,3 +428,6 @@ assert(testCount, 'returns correct value for two integers', () => {
   return example !== undefined && example === 357458;
 });
 
+console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
+
