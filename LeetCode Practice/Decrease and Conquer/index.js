@@ -443,4 +443,7 @@ function captureLog(method, ...params) {
   console.log = (...args) => {
     record = record.concat(...args);
   };
- 
+  method(...params);
+  console.log = log;
+  return record;
+}
