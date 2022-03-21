@@ -483,3 +483,8 @@ function assert(count, name, test) {
   } catch (e) {
     errMsg = e;
   }
+  console.log('  ' + (count[1] + ')   ').slice(0, 5) + pass + ' : ' + name);
+  if (errMsg !== null) {
+    console.log('       ' + errMsg + '\n');
+  }
+}
