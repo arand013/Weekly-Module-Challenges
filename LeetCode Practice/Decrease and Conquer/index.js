@@ -431,3 +431,16 @@ assert(testCount, 'returns correct value for two integers', () => {
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
 
 
+
+// captures all elements that were printed to the console
+//
+// input: method {Function} - function to execute
+// input: {Array} - parameters for the function
+// output: {Array} - array of all the captured logs
+function captureLog(method, ...params) {
+  let record = [];
+  const log = console.log;
+  console.log = (...args) => {
+    record = record.concat(...args);
+  };
+ 
