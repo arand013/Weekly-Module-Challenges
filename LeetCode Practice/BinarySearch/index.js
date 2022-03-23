@@ -62,3 +62,10 @@
    }
  }
  
+ class BinarySearchTree {
+   constructor() {
+     this.root = null;
+     this.size = 0;
+   }
+ 
+ }
