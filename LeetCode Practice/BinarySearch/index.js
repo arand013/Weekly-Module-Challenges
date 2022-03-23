@@ -68,4 +68,13 @@
      this.size = 0;
    }
  
- }
+ // Time Complexity: O(N) - assuming an imbalanced tree
+   // Auxiliary Space Complexity: O(1)
+   insert(value) {
+    let newNode = new TreeNode(value);
+    if (this.root === null) {
+      this.root = newNode;
+      this.size++;
+      return;
+    }
+   }}
