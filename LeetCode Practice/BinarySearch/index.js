@@ -51,3 +51,14 @@
  *
  */
 
+ 'use strict';
+
+
+ class TreeNode {
+   constructor(value) {
+     this.value = value === undefined? null : value;
+     this.left = null;
+     this.right = null;
+   }
+ }
+ 
