@@ -110,3 +110,16 @@
 
 
 
+
+////////////////////////////////////////////////////////////
+///////////////  DO NOT TOUCH TEST BELOW!!!  ///////////////
+////////////////////////////////////////////////////////////
+
+
+console.log('TreeNode Class');
+let testCount = [0, 0];
+
+assert(testCount, 'able to create an instance', () => {
+ let node = new TreeNode();
+ return typeof node === 'object';
+});
