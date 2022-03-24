@@ -156,3 +156,11 @@ assert(testCount, 'able to reassign a value', () => {
  node.value = 5;
  return node.value === 5;
 });
+
+
+assert(testCount, 'able to point to left child node', () => {
+ let node1 = new TreeNode(5);
+ let node2 = new TreeNode(10);
+ node1.left = node2;
+ return node1.left.value === 10;
+});
