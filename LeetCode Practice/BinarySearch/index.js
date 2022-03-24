@@ -123,3 +123,18 @@ assert(testCount, 'able to create an instance', () => {
  let node = new TreeNode();
  return typeof node === 'object';
 });
+
+assert(testCount, 'has value property', () => {
+ let node = new TreeNode();
+ return node.hasOwnProperty('value');
+});
+
+assert(testCount, 'has left property', () => {
+ let node = new TreeNode();
+ return node.hasOwnProperty('left');
+});
+
+assert(testCount, 'has right property', () => {
+ let node = new TreeNode();
+ return node.hasOwnProperty('right');
+});
