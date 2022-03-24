@@ -92,4 +92,9 @@
     this.size++;
   }
 
- }
+
+  // Time Complexity: O(N) - assuming an imbalanced tree
+  // Auxiliary Space Complexity: O(1)
+  search(value) {
+    let current = this.root;
+  
