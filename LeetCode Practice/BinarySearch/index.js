@@ -138,3 +138,10 @@ assert(testCount, 'has right property', () => {
  let node = new TreeNode();
  return node.hasOwnProperty('right');
 });
+
+
+// assert(testCount, 'has default value set to null', () => {
+//  let node = new TreeNode();
+//  return node.value === null;
+// });
+
