@@ -151,8 +151,8 @@ assert(testCount, 'able to assign a value upon instantiation', () => {
 });
 
 
-// assert(testCount, 'able to reassign a value', () => {
-//  let node = new TreeNode();
-//  node.value = 5;
-//  return node.value === 5;
-// });
+assert(testCount, 'able to reassign a value', () => {
+ let node = new TreeNode();
+ node.value = 5;
+ return node.value === 5;
+});
