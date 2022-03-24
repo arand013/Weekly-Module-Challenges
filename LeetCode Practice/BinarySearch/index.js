@@ -97,4 +97,16 @@
   // Auxiliary Space Complexity: O(1)
   search(value) {
     let current = this.root;
-  
+    while (current !== null) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.value > value ? current.left : current.right;
+    }
+    return false;
+  }
+}
+
+
+
+
