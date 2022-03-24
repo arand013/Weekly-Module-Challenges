@@ -140,8 +140,12 @@ assert(testCount, 'has right property', () => {
 });
 
 
-// assert(testCount, 'has default value set to null', () => {
-//  let node = new TreeNode();
-//  return node.value === null;
-// });
+assert(testCount, 'has default value set to null', () => {
+ let node = new TreeNode();
+ return node.value === null;
+});
 
+assert(testCount, 'able to assign a value upon instantiation', () => {
+ let node = new TreeNode(5);
+ return node.value === 5;
+});
