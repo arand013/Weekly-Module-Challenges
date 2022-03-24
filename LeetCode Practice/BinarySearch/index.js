@@ -77,4 +77,19 @@
       this.size++;
       return;
     }
-   }}
+
+    let parent = null;
+    let child = this.root;
+    while (child !== null) {
+      parent = child;
+      child = parent.value > value ? parent.left : parent.right;
+    }
+    if (parent.value > value) {
+      parent.left = newNode;
+    } else {
+      parent.right = newNode;
+    }
+    this.size++;
+  }
+
+ }
