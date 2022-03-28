@@ -201,3 +201,9 @@ assert(testCount, 'default root set to null', () => {
  let bst = new BinarySearchTree();
  return bst.root === null;
 });
+
+
+// assert(testCount, 'default size set to zero', () => {
+//  let bst = new BinarySearchTree();
+//  return bst.size === 0;
+// });
