@@ -174,3 +174,13 @@ assert(testCount, 'able to point to right child node', () => {
 });
 
 console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
+
+
+
+console.log('Binary Search Tree Class');
+testCount = [0, 0];
+
+assert(testCount, 'able to create an instance', () => {
+ let bst = new BinarySearchTree();
+ return typeof bst === 'object';
+});
