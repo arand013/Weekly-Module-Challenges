@@ -164,3 +164,13 @@ assert(testCount, 'able to point to left child node', () => {
  node1.left = node2;
  return node1.left.value === 10;
 });
+
+
+// assert(testCount, 'able to point to right child node', () => {
+//  let node1 = new TreeNode(5);
+//  let node2 = new TreeNode(10);
+//  node1.right = node2;
+//  return node1.right.value === 10;
+// });
+
+// console.log('PASSED: ' + testCount[0] + ' / ' + testCount[1], '\n\n');
