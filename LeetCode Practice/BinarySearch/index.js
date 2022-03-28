@@ -184,3 +184,9 @@ assert(testCount, 'able to create an instance', () => {
  let bst = new BinarySearchTree();
  return typeof bst === 'object';
 });
+
+
+assert(testCount, 'has root property', () => {
+ let bst = new BinarySearchTree();
+ return bst.hasOwnProperty('root');
+});
