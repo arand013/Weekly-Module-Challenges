@@ -190,3 +190,10 @@ assert(testCount, 'has root property', () => {
  let bst = new BinarySearchTree();
  return bst.hasOwnProperty('root');
 });
+
+
+// assert(testCount, 'has size property', () => {
+//  let bst = new BinarySearchTree();
+//  return bst.hasOwnProperty('size');
+// });
+
