@@ -58,9 +58,28 @@
 
 
 // DIAGRAM
+// == ( Means TRUE)      != ( Means NOT TRUE)
+
+
+
+
+//                                  S = 'xxxx'             P = 'xxxx'
+//                               /               |                        \
+//     P is a Character (char)                  P is a ' ? '               P is a ' * '
+//    /                \                           |                        /     |        \
+//   S[i] == P[j]     S[i] != P[j]              S = 'xx{i}x'
+//     /                  \                     P = 'xx{j}x'                1) Match 1 characters 
+// Loop iterates  |      FALSE                  
+//      -->       |                              i = i - 1                      i = i - 1
+//   S = 'xx{i}x' |                              j = j - 1                      j = j - 1                
+//   P = 'xx{j}x' |                                                         2) Match Sequence Characters
 
 
 
 // PSUEDOCODE
 
 // CODE
+
+var isMatch = function(s, p) {
+    
+};
