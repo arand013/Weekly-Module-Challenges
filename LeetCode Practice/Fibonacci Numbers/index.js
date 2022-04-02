@@ -55,3 +55,19 @@
             // START CODE //
 
 
+// UNDERSTAND
+// - This is a dynamic programming question Involving ( RECURSION )
+// - We can use MEMOIZATION or TABULATION 
+// - MEMOIZATION will use TOP -> DOWN
+    // -SPACE: 0(N) - TIME: 2(N)
+
+// - TABULATION will use Bottomo UP approach that invoves a Linear RECURSION METHOD
+    // SPACE: 0(N) - TIME: 0(N)
+
+// DIAGRAM
+
+
+
+// PSUEDOCODE
+
+// CODE
