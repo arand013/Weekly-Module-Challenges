@@ -24,6 +24,8 @@ function readLine() {
 
 
 
+
+
 /*
  * Complete the 'compressedString' function below.
  *
