@@ -4,7 +4,6 @@
 
 let arr = [100,99,98,97] //return [3,2,1] 
 
-
 function revArr(arr) {
   for(let i = 0 ; i <= arr.length/2 - 1; i++) {
     temp = arr[i] 
