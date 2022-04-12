@@ -13,6 +13,7 @@ function revArr(arr) {
   return arr
 }
 
+
 arr.reverse()
 
 console.log(arr);
