@@ -16,6 +16,7 @@ function revArr(arr) {
 
 
 
+
 arr.reverse()
 
 console.log(arr);
