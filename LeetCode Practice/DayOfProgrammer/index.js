@@ -29,9 +29,41 @@ function readLine() {
  * The function accepts INTEGER year as parameter.
  */
 
+// UNDERSTAND
+/*
+1. From years ranging from 1700 to 2700
+2. Given a (year); find The DATE of the 256th day of the (year)
+3. Print/Return the day in dd.mm.yyyy digits formula
+4. Parameter (year) 
+5. Constraint: 1700-2700 (year range)
+
+
+
+
+// DIAGRAM 
+
+Example 1:                  Example 2:                  Example 3: 
+Input: 2017                 Input: 2016                 Input: 1800       
+Output: 13.09.2017          Output: 12.09.2016          Output: 12.09.1800
+
+// PSUEDOCODE
+
+1) Define function and parameters 
+2) Initiate variables
+3) Begin Iteration Loop / Math caculations
+4) return the function call
+
+*/
+
+// 1)
 function dayOfProgrammer(year) {
-    
-    // Write your code here
+
+// 2) 
+    let y = parseInt(readLine()); 
+    let leap = 0;
+
+//
+     
 
 
 
