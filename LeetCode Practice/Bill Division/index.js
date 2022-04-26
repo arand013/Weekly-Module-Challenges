@@ -87,10 +87,10 @@ function readLine() {
 
 // UNDERSTAND
 /*
-1. 2 friends are splitting a bill (input a bill with items from a list)
-2. Brian will pay bill but Anna will contribute half (input)
+1. 2 friends are splitting a bill (input a bill with items from a list , bill, )
+2. Brian will pay bill but Anna will contribute half (input , k , )
 3. Given what Anna did not eat, then calculate if Anna overpaid or paid an equal amount; 
-
+4. Return the change to her or 'Bon Apetit' if its was an equal amount
 
 
 
@@ -112,28 +112,31 @@ Output: 5                            Output: 7
 
 
 
-
-
-
-
-
-
-
 /*
  * Complete the 'bonAppetit' function below.
  *
  * The function accepts following parameters:
- *  1. INTEGER_ARRAY bill
- *  2. INTEGER k
- *  3. INTEGER b
+ *  1. INTEGER_ARRAY bill | A list 
+ *  2. INTEGER k | the number of items ordered and the -based index 
+ *  3. INTEGER b | the amount of money that Brian charged Anna for her share of the bill.
+
+
  */
 
 function bonAppetit(bill, k, b) {
-    // Write your code here
-    
-    
+    let bill = [];
+    let k = "";
+    let b =  " "; 
 
-}
+    if(k > bill) {
+
+    } else if ( bill === k) {
+        return "Bon Apetit"; 
+
+    }
+
+    return bonAppetit();
+};
 
 
 
