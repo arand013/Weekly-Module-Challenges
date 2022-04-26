@@ -58,18 +58,38 @@ Output: 13.09.2017          Output: 12.09.2016          Output: 12.09.1800
 // 1)
 function dayOfProgrammer(year) {
 
-// 2) 
-    let y = parseInt(readLine()); 
-    let leap = 0;
+// 3) 
+if (year == 1918) {
+// Corner Case
+    return `26.09.${year}`;
+} else if (year > 1918) {
 
-//
-     
+// Calculating Leap year in Gregorian Calendar
+const isLeapYear = (year % 4 == 0) && (year % 100 != 0) || year % 400 == 0;
+return `${isLeapYear? 12 : 13}.09.${year}`; 
+} else { 
+
+// 4) 
+// Calculating Leap year in Julian Calendar
+    return `${year % 4 == 0 ? 12 : 13}.09.${year}`;
+  };
+};
 
 
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
