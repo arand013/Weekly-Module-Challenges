@@ -75,6 +75,50 @@ function readLine() {
     return inputString[currentLine++];
 }
 
+
+
+
+
+
+
+
+
+
+
+// UNDERSTAND
+/*
+1. 2 friends are splitting a bill (input a bill with items from a list)
+2. Brian will pay bill but Anna will contribute half (input)
+3. Given what Anna did not eat, then calculate if Anna overpaid or paid an equal amount; 
+
+
+
+
+// DIAGRAM 
+
+Example 1:                           Example 2:                 
+Input: 3 10 2 9                      Input: 3 10 2 9                 
+       12  (Sarah contribution)   
+Output: 5                            Output: 7  
+
+// PSUEDOCODE
+
+1) Define function and parameters 
+2) Initiate variables
+3) Begin Iteration Loop / Math caculations
+4) return the function call
+
+*/
+
+
+
+
+
+
+
+
+
+
 /*
  * Complete the 'bonAppetit' function below.
  *
@@ -90,6 +134,22 @@ function bonAppetit(bill, k, b) {
     
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function main() {
     const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
