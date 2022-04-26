@@ -78,19 +78,6 @@ return `${isLeapYear? 12 : 13}.09.${year}`;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
