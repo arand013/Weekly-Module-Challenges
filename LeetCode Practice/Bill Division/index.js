@@ -124,22 +124,18 @@ Output: 5                            Output: 7
  */
 
 function bonAppetit(bill, k, b) {
-    let bill = [];
-    let k = "";
-    let b =  " "; 
+    bill[k] = 0;
 
-    if(k > bill) {
+    let reducer=(accumulator,currentValue)=> accumulator+currentValue;
 
-    } else if ( bill === k) {
-        return "Bon Apetit"; 
+    let annaExpectedBill = bill.reduce(reducer)/2;
 
+    if(b == annaExpectedBill) {
+        console.log("Bon Appetit");
     }
-
-    return bonAppetit();
+    else{ console.log(b-annaExpectedBill)
+    }
 };
-
-
-
 
 
 
