@@ -152,6 +152,8 @@ function bonAppetit(bill, k, b) {
 
 
 
+
+
 function main() {
     const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
 
