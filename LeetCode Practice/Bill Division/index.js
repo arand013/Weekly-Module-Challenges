@@ -113,7 +113,6 @@ Output: 5                            Output: 7
 
 
 
-
 /*
  * Complete the 'bonAppetit' function below.
  *
@@ -138,10 +137,6 @@ function bonAppetit(bill, k, b) {
     else{ console.log(b-annaExpectedBill)
     }
 };
-
-
-
-
 
 
 
