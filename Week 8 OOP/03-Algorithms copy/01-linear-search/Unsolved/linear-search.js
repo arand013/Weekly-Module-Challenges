@@ -6,13 +6,14 @@
 var linearSearch = function(arr, target) {
 
   // loop through the array 
-  for (let i = 0; i < arr.length; i++ ){
+  for(var i = 0; i < arr.length; i++) {
+
     // check target against current item
-    if (arr[i] === target) {
-      return i;
-    }
-  }
+    if (arr[i] === target ){
+      return i; 
+    } 
+   }
 
   // return index
-  return -1;
+return -1; 
 };
