@@ -4,20 +4,19 @@
 var isUnique = function(arr) {
 
   // empty container var for holding our checked values
-  var container = "";
+  var container = {};
 
   // iterate through the array 
   for (var i = 0; i < arr.length; i++){
+    var currentNumber = arr[i];
     
     // if the container var contains the current item
-    if (container.indexOf(arr[i]) > -1) {
-      return true;
-    } else {
+    if (container[currentNumber] === true) {
+      return false;
+    } 
       // add the current item to the container var
-      container + "|" + arr[i];
+      container[currentNumber] = true; 
     }
-  }
-
-  return false;
+  return true;
 
 };
