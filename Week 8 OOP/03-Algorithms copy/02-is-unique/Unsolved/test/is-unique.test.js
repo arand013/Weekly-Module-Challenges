@@ -32,4 +32,20 @@ describe("isUnique", function() {
 
     expect(result).to.eql(false);
   });
+
+  it("should return true when given the array [1, 2, 3, 4, 5]", function() {
+    var arr = [1, 2, 3, 4, 5];
+
+    var result = isUnique(arr);
+
+    expect(result).to.eql(true);
+  });
+
+  it("should return NAYYY when given the array [1, 2, 1, 2, 5]", function() {
+    var arr = [1, 2, 1, 2, 5];
+
+    var result = isUnique(arr);
+
+    expect(result).to.eql(false);
+  });
 });
