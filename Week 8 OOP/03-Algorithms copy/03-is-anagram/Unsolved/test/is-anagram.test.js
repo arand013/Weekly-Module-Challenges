@@ -7,7 +7,7 @@ describe("isAnagram", function() {
 
     var result = isAnagram(strA, strB);
 
-    expect(result).to.eql(true);
+    expect(result).to.eql() (true);
   });
 
   it("should return true when given the strings 'octagonal` and `tganoalc`", function() {
