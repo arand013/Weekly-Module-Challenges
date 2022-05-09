@@ -10,6 +10,7 @@ function Animal(raining, noise) {
   };
 }
 
+
 // Creates `dog` and `cat` objects with `raining` and `noise` properties
 let dog = new Animal(true, 'Woof!');
 let cat = new Animal(false, 'Meow!');
