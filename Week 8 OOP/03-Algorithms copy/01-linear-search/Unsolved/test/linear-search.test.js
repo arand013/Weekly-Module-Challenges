@@ -23,6 +23,7 @@ describe("linearSearch", function() {
     expect(result).to.eql(2);
   });
 
+  
   it("should return -1 when given the array [13, 5, 6] and a target of 11", function() {
     var arr = [13, 5, 6];
     var target = 11;
