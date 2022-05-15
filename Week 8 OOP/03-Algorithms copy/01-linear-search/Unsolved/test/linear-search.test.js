@@ -52,6 +52,4 @@ describe("linearSearch", function() {
   });
   
 
-  
-  
 });
