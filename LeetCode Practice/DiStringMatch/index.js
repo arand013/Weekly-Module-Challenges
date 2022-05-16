@@ -31,3 +31,29 @@ s[i] is either 'I' or 'D'.
 
 
 // ANSWER
+
+// UNDERSTAND
+/*
+
+
+Observations: 
+
+- For "I", use the smallest number possible 
+  - push smallest to result 
+  - increment smallest
+  - i++
+- For "D", use the largest number possible 
+  - push largest to result 
+  - decrement largest
+  - i++
+
+- push last number to result (smallest or largest) 
+
+
+
+
+
+*/
+// DIAGRAM 
+// PSUEDOCODE
+// CODE
