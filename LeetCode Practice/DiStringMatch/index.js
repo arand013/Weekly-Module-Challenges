@@ -106,3 +106,26 @@ Steps: 1. Create function and parameters (DiStringMatch (s, perm))
        4. return result w/ & console.log function name
 */
 
+// CODE
+
+    function DiStringMatch (s) {
+
+        const result = [];
+
+        let smallest = 0;
+        let largest = s.length;
+
+
+        for(let i = 0; i < s.length; i++){
+            let char = s[i];
+
+            if (char === "I") {
+                result.push(smallest);
+                smallest++;
+            } else {
+                result.push(largest);
+                largest--;
+            }
+        }
+return result; 
+    }
