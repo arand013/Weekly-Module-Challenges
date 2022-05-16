@@ -30,9 +30,11 @@ s[i] is either 'I' or 'D'.
 */ 
 
 
-// ANSWER
+// ANSWER----------------------------------------------------------------
 
-// UNDERSTAND
+
+
+// UNDERSTAND----------------------------------------------------------------
 /*
 
 
@@ -54,6 +56,53 @@ Observations:
 
 
 */
-// DIAGRAM 
-// PSUEDOCODE
-// CODE
+
+
+
+// DIAGRAM----------------------------------------------------------------
+/*
+
+
+Example 1:
+
+Input: s = "IDID"
+Output: [0,4,1,3,2]
+
+
+Example 2:
+
+Input: s = "III"
+Output: [0,1,2,3]
+
+Example 3:
+
+Input: s = "DDI"
+Output: [3,2,0,1]
+
+      i
+"IDDDI"
+
+
+smallest = 2
+largest = 2
+
+result = [0,5,4,3,1,2]
+
+
+     i
+"IDID"
+
+smallest = 2
+largest = 2
+result = [0,4,1,3,2]
+*/
+
+
+// PSUEDOCODE-------------------------------------------------------------
+/*
+Steps: 1. Create function and parameters (DiStringMatch (s, perm))
+       2. Initiate variables for, (result, smallest, largest, )
+       3. Write loop (for to loop and iterate thru, s.length and find smalles or largest letter to push to result)
+       4. return result w/ & console.log function name
+*/
+
