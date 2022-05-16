@@ -130,3 +130,5 @@ Steps: 1. Create function and parameters (DiStringMatch (s, perm))
 return result; 
     }
 console.log(DiStringMatch("IDDDI")); 
+console.log(DiStringMatch("DDIIIDDDDDDDI")); 
+console.log(DiStringMatch("III")); 
