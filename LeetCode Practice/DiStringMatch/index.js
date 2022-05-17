@@ -132,3 +132,4 @@ return result;
 console.log(DiStringMatch("IDDDI")); 
 console.log(DiStringMatch("DDIIIDDDDDDDI")); 
 console.log(DiStringMatch("III")); 
+
