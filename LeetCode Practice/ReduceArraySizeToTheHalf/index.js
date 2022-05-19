@@ -1,5 +1,6 @@
 // QUESTION Reduce Array Size to The Half
 
+
 /*
 You are given an integer array arr. 
 You can choose a set of integers and remove all the 
