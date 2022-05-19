@@ -149,6 +149,22 @@ current = [8,null,null]
 
         let current, parent, side; 
 
+        while (queue.size() > 0) {
+            [current, parent, side] = queue.dequeue();
+
+            if(current.right !== null) {
+                if (visited.has(current.right)) {
+                    parent[side] = null; 
+                    return root;
+                }
+                queue.enqueue([current.left, current, "right"]);
+                visited.add(current.right);
+            }
+            
+            if(current.left !== null) {
+                
+            }
+        }
         
     }
 
