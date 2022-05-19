@@ -157,14 +157,16 @@ current = [8,null,null]
                     parent[side] = null; 
                     return root;
                 }
-                queue.enqueue([current.left, current, "right"]);
+                queue.enqueue([current.right, current, "right"]);
                 visited.add(current.right);
             }
             
             if(current.left !== null) {
-                
+                queue.enqueue([current.left, current, "left"]);
+                visited.add(current.left);  
             }
-        }
-        
+        } 
     }
+
+    
 
