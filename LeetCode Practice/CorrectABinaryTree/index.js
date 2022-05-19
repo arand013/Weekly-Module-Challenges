@@ -168,5 +168,30 @@ current = [8,null,null]
         } 
     }
 
-    
+var CorrectBinaryTree = function(root) {
+    const stack = [];
+    const visited = new Set();
+
+    stack.push([root, null, null]);
+    visited.add(root); 
+
+    let current, parent, side; //
+    while (stack.length > 0) { 
+        [current, parent, side] = stack.pop();
+
+        if (current.left !== null) { 
+            stack.push([current.left, current, "left"]);
+            visited.add(current.left);
+        }
+
+        if (current.right !== null) { 
+            if (visited.has(current.right)) {
+                parent[side] = null;
+                return root;
+            }
+            stack.push([current.right, current, "right"]);
+            visited.add(current.right);
+        }
+    }
+};
 
