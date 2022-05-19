@@ -58,8 +58,14 @@ function threeSum(array) {
             while (left < right) { 
                 const currentSum = array[i] + array[left] + array[right];
                 if (currentSum === 0) {
-                    triplets.push([array[i], array[left]])
+                    triplets.push([array[i], array[left], array[right]]);
+                    while(array[left] == array[left + 1]) left ++;
+                    while(array[right] == array[right - 1]) right ++;
+                    left++;
+                    right--;
 
+                } else if(currentSum < 0) {
+                    
                 }
 
 
