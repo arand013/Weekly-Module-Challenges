@@ -55,7 +55,7 @@ root, return the root of the binary tree after removing
 this invalid node and every node underneath it
 (minus the node it incorrectly points to).
 
-The idea is to traverse the BFS sequence. (Breath First Search)
+The idea is to traverse the BFS sequence. (Breadth-First-Search)
 Because the error is the right pointer of a certain node, 
 our level order traversal will change a little.
 
@@ -70,7 +70,72 @@ the left/right child already exists in the hashset.
 child points to a node in the current layer.
 -We can remove the child who points to the wrong one.
 
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ * 
+ * 
+ *  * @param {TreeNode} root
+ * @param {number} from
+ * @param {number} to
+ * @return {TreeNode}
+*/
+
+// STEP EXPLANATION PSUEDOCODE
+
+/*
+
+
+
+
+
+                      8
+            /                    \
+           3                      1
+        /                    /        \
+       7                    9           4
+     /                                /    \
+    2                                5      6
+
+
+2 node's right child is pointing to 6 node 
+
+visited = {
+  8,1,3,4,9,7,6,5,
+}
+
+
+stack
+[current,parent,side]
+-----------------------------------------------------------------------------
+| (3) (1) 
+-----------------------------------------------------------------------------
+
+curr = (8)
+
+
+stack
+[current,parent,side]
+-----------------------------------------------------------------------------
+| [3,8,'left'] [1,8,'right']
+-----------------------------------------------------------------------------
+
+current = [8,null,null] 
+
+
+- use breadth-first traversal - top to bottom, right to left 
+
+- as we perform bfs, if current node's right child has already been visited, 
+  then current node is the defect, and must be removed. 
+  - set parent[side] = null;
+
+
+
 */
 
 
 // ANSWER
+
