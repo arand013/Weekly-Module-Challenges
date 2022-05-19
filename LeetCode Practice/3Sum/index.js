@@ -65,14 +65,13 @@ function threeSum(array) {
                     right--;
 
                 } else if(currentSum < 0) {
-                    
+                    left ++;
+                } else if(currentSum > 0) {
+                    right --;
                 }
-
-
             }
-
-
-
         }
     }
+console.log(triplets)
+return triplets;
 }
