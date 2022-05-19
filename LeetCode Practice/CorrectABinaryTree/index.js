@@ -139,3 +139,16 @@ current = [8,null,null]
 
 // ANSWER
 
+    var correctBinaryTree = function(root){
+
+        const queue = new Queue();
+        const visited = new Set();
+
+        queue.enqueue([root, null, null]);
+        visited.add(root);
+
+        let current, parent, side; 
+
+        
+    }
+
