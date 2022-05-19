@@ -36,6 +36,16 @@ This will make the new array empty.
 
 //UNDERSTAND
 /* 
+
+Want to count how many number in the array using 0 based indexes
+Sort by count of repeating number from most repeated numbers to lowest
+Delete 2 numbers from the array, to get a half sized array 
+Initiate a map to hold the sort
+
+
+
+
+
 1) create a function w/ parameters (WORD, WORD1, WORD2) 
 2) create variables,
 3) write a loop 
@@ -48,10 +58,37 @@ This will make the new array empty.
 
 //PSUEDOCODE
 
-//CODE
 
 
 
 
 
 // ANSWER
+
+
+//CODE
+
+function minSetSize(arr) {
+    let map = {}; 
+
+    arr.forEach(num => { 
+        if(map[num] === undefined) {
+            map[num] = 0;
+        }
+        map[num]++;
+    });
+    const n = arr.length;
+    let cur = n, res = 0;
+
+    const list = Object.keys(map).sort((a,b) => map[b]-map[a]);
+
+    for(let i = 0; i < list.length; i++ ) {
+        const num = list[i]; 
+        cur -= map[num];
+        res++; 
+        
+        if(cur <= n/2) {
+            return res; 
+        }
+    }
+}; 
