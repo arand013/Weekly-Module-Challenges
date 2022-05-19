@@ -28,3 +28,45 @@ Constraints:
 
 
 // ANSWERS
+
+
+//UNDERSTAND
+/* 
+1) create a function w/ parameters (array of integers) 
+2) create variables,
+3) write a loop 
+4) return, all the triplets 
+*/
+//DIAGRAM
+/* 
+*/
+//PSUEDOCODE
+//CODE
+
+
+function threeSum(array) {
+    array.sort((a,b) => a - b);
+
+    const triplets = [];
+
+    for(let i = 0; i < array.length -2; i++) {
+        if(array[i] != array [i-1]) { 
+            
+            let left = i + 1;
+        let right = array.length - 1; 
+        
+            while (left < right) { 
+                const currentSum = array[i] + array[left] + array[right];
+                if (currentSum === 0) {
+                    triplets.push([array[i], array[left]])
+
+                }
+
+
+            }
+
+
+
+        }
+    }
+}
