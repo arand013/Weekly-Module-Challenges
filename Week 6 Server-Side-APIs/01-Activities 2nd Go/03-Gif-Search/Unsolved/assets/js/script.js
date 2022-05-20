@@ -9,6 +9,12 @@
 // Remember to add your API key at the end
 // YOUR CODE HERE
 //
+
+fetch(
+  '' + 
+  searchTerm + 
+  ''
+)
 .then(function(response) {
   return response.json();
 })
@@ -23,6 +29,8 @@
   var gifImg = document.createElement('img');
   gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
   // Append 'gifImg' to the <div>
-  // YOUR CODE HERE
-  //
+
+  responseContainerEl.appendChild(gifImg);
+
+
 })

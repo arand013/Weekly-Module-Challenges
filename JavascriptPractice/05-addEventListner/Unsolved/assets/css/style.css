@@ -1,0 +1,58 @@
+h4 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  background: white;
+  border: 1px solid #a5b1c2;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #111111;
+  display: inline-block;
+  margin: 1rem auto;
+  min-width: 180px;
+  overflow: hidden;
+  padding: 15px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s ease-in-out all;
+}
+button span {
+  position: relative;
+  z-index: 2;
+}
+button:before {
+  background: linear-gradient(transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+  content:'';
+  height: 200%;
+  position: absolute;
+  right: calc(100% + 20px);
+  top: -55%;
+  transform: rotate(-70deg);
+  transition: .6s ease-in-out right;
+  width: 80px;
+  z-index: 0;
+}
+
+button:hover:before {
+  right: -100%;
+}
+/* Extra visual styling for buttons on hover - optional */
+button:hover, button:focus {
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1), inset 0 10px 30px rgba(255,255,255,0.3), inset 0 2px 2px rgba(255,255,255,0.2);
+  color: white;
+}
+
+button.red:hover, button.red:focus {
+background: #e52e2e; border-color: #b50f00;
+}
+
+.button.green:hover, button.green:focus { 
+  background: #1a45df; border-color: #1a03ca; }
