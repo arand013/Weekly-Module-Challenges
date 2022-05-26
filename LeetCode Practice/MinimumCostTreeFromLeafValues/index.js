@@ -1,4 +1,4 @@
-// QUESTIONS
+// QUESTION  //https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ 
 
 /*
 Given an array arr of positive integers, consider all binary trees such that:
@@ -83,3 +83,8 @@ result: [6,0, 0, 8, 13, 14]
 */
 //PSUEDOCODE
 //CODE
+
+
+var mctFromLeafValues = function(arr) {
+    
+};
