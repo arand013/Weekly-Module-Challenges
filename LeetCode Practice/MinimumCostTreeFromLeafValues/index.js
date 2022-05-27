@@ -85,6 +85,22 @@ result: [6,0, 0, 8, 13, 14]
 //CODE
 
 
-var mctFromLeafValues = function(arr) {
+function mctFromLeafValues(arr) {
+
+  let cost = 0; 
+    let stack = [Infinity];
     
+    for(let num of arr) {
+        while (stack[stack.length - 1] <= num) {
+            let mid = stack.pop();
+            cost += mid * Math.min(stack[stack.length -1], num);
+        }
+    stack.push(num);
+    }
+    
+    while (stack.length > 2){
+        cost += stack.pop() * stack[stack.length -1];
+    }
+
+    return cost;
 };
