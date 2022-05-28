@@ -103,5 +103,4 @@ function mctFromLeafValues(arr) {
     }
 
     return cost;
-    
 };
