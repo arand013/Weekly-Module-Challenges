@@ -98,7 +98,6 @@ function mctFromLeafValues(arr) {
     stack.push(num);
     }
     
-    
     while (stack.length > 2){
         cost += stack.pop() * stack[stack.length -1];
     }
