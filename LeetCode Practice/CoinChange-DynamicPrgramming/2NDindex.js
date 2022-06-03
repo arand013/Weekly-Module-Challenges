@@ -24,14 +24,17 @@ Output: 0
 
 // Understanding 
 1) Reverse Top Down Solutiom
-    a) Find recursive relationships [ involves subtrating amount - coins]
+    a) Find recursive relationships [ involves subtrating amount - coins] 
                                     [track # of coins ]
+                                    [ the min]
     b) Find base cases [When do we need to stop]
                        [amount = 0] Valid Path / Save or Return # of coins
                        [amount < 1] INVALID Path / DONT Save or Return # of coins
                        [i = coins.length - 1 ] Stop Loop / End of Loop
 
-2) 
+2) Look for repeating subProblems 
+    a) Key = Amount
+    b) Value = # of Coins
 
 
 
