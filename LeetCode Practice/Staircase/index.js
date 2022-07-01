@@ -134,3 +134,4 @@ function main() {
 
     staircase(n);
 }
+
