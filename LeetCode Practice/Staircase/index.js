@@ -128,7 +128,6 @@ function staircase(n) {
     }
 }
 
-
 function main() {
     const n = parseInt(readLine().trim(), 10);
 
