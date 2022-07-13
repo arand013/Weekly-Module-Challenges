@@ -26,6 +26,11 @@ The nextInLine function should then return the element that was removed.
 // GIVEN
 
 function nextInLine(arr, item) {
+    
+        // SOLUTION
+        testArr.push(item);
+        return arr.shift();
+        // END of SOLUTION
 
   }
   
