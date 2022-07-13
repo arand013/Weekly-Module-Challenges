@@ -18,5 +18,7 @@ There should be at least 5 sub-arrays in the list.
 
 /*
 (1) Every sentence(.) reveals more about how to solve the question.
+(2) Begin by creating a console.log of the given to see and view what is happening as you progress. 
+
 */ 
 
