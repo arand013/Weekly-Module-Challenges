@@ -23,7 +23,7 @@ There should be at least 5 sub-arrays in the list.
 */ 
 
 // GIVEN
-const myList = [["Cookie", 1], ["Water", 2]];
+const myList = [["Cookie", 1], ["Water", 2],["Oatmeal", 3], ["Juice", 4], ["Wings", 5]];
 
 
 // SOLUTION
