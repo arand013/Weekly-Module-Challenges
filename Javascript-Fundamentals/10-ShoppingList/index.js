@@ -23,9 +23,11 @@ There should be at least 5 sub-arrays in the list.
 */ 
 
 // GIVEN
-const myList = [];
+const myList = [["Cookie", 1], ["Water", 2]];
+
 
 // SOLUTION
 console.log(myList);
+
 
 
