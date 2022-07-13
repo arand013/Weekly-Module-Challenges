@@ -22,3 +22,10 @@ There should be at least 5 sub-arrays in the list.
 
 */ 
 
+// GIVEN
+const myList = [];
+
+// SOLUTION
+console.log(myList);
+
+
