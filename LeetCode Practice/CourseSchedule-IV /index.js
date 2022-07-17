@@ -77,3 +77,37 @@ Explanation: There are no prerequisites, and each course is independent.
   traverse(current);
   return flag;
 }
+
+var checkIfPrerequisite = function(numCourses, prerequisites, queries) {
+  const graph = {};
+
+  for (let i = 0; i < numCourses; i++) {
+    graph[i] = [];
+  }
+
+  for (let prereq of prerequisites) {
+    let a = prereq[0];
+    let b = prereq[1];
+
+    graph[a].push(b);
+  }
+
+  // console.log("GRAPH: ", graph);
+
+  // attempt to travel with each query 
+
+  const result = [];
+  
+  for (let query of queries) {
+    let u = query[0];
+    let v = query[1];
+
+    if (dfs(u, graph, v)) {
+      result.push(true);
+    } else {
+      result.push(false);
+    }
+  }
+
+  return result;
+};
