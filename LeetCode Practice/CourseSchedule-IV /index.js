@@ -111,3 +111,90 @@ var checkIfPrerequisite = function(numCourses, prerequisites, queries) {
 
   return result;
 };
+
+
+
+console.log(checkIfPrerequisite(3, [[1,2],[1,0],[2,0]], [[1,0],[1,2]]));
+console.log(checkIfPrerequisite(2, [[1,0]], [[0,1],[1,0]]));
+console.log(checkIfPrerequisite(2, [[1,0]], [[1,1],[1,0]]));
+
+
+/*
+
+graph = {
+  0 : [1],
+  1 : [2],
+  2 : []
+}
+
+
+        0 --> 1 --> 2
+
+
+query [[0, 2]]
+
+dependencies = {
+  0: [],
+  1: [0],
+  2: [0,1]
+}
+
+possible_pairs = {
+  "0_1"
+  "0_2"
+  "1_2"
+}
+
+visited = {0,1}
+
+                          current
+                            0
+                            |
+                            1
+                            |
+                            2
+
+
+
+
+possible_pairs = {
+  "1_2"
+  "1_3"
+  "0_1"
+  "0_2"
+  "0_3"
+}
+
+                                  4
+                                  |  \
+                                  v   \
+                           2 -->  1    v
+                              /    |   5
+                            /      |   /
+                           v       v  v
+                           0       3
+                                   |
+                                   |
+                                   v
+                                   6
+
+
+
+
+0,3,1,2,4
+
+reversed - 4,2,1,3,0
+
+Post-order dfs
+
+
+
+
+- dfs function (current) 
+  - if at a visited node, terminate recursion
+
+  - get all edges, travel to edges 
+  - perform an action 
+
+
+*/
