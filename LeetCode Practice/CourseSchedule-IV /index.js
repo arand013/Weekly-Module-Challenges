@@ -52,3 +52,28 @@ Explanation: There are no prerequisites, and each course is independent.
 
 
 */
+
+ const dfs = (current, graph, target) => {
+  const visited = new Set();
+  let flag = false;
+  
+  const traverse = (current) => {
+    if (visited.has(current)) {
+      return;
+    }
+    if (current === target) {
+      flag = true;
+      return;
+    }
+  
+    let edges = graph[current];
+
+    visited.add(current);
+    for (let edge of edges) {
+      traverse(edge);
+    }
+  }
+
+  traverse(current);
+  return flag;
+}
