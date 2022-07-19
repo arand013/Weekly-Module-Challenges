@@ -47,3 +47,12 @@ Create an if statement inside the function to return Yes, that was true if the p
 (4) shift removes the first item in  a list
 
 */ 
+
+
+function test (myCondition) {
+  if (myCondition) {
+    return "It was true";
+  }
+  return "It was false";
+}
+
