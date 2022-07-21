@@ -49,10 +49,16 @@ Create an if statement inside the function to return Yes, that was true if the p
 */ 
 
 
-function test (myCondition) {
+function trueOrFalse(myCondition) {
   if (myCondition) {
     return "It was true";
   }
   return "It was false";
 }
 
+
+console.log(trueOrFalse(true));
+trueOrFalse(true);
+
+console.log(trueOrFalse(false));
+trueOrFalse(false);
