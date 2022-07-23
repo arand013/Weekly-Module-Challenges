@@ -53,7 +53,7 @@ function cc(card) {
       count--;
       break; 
   }
-  var holdbet = "Hold"
+  let holdbet = "Hold"
   if ( count > 0) {
     holdbet = "Bet"
   }
