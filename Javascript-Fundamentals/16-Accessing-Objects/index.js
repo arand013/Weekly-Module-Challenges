@@ -29,3 +29,13 @@ Set the variable hatValue equal to the object's property hat
 and set the variable shirtValue equal to 
 the object's property shirt.
 */
+
+// Setup
+const testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+  };
+  
+  // Only change code below this line
+
