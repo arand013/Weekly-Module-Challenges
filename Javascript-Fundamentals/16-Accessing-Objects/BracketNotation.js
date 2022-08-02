@@ -44,6 +44,4 @@ const testObj = {
   // Create code below 
   const entreeValue = testObj["an entree"];
   const drinkValue = testObj["the drink"];
-
-  
   
