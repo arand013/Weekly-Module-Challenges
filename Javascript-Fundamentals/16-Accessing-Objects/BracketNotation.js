@@ -38,10 +38,13 @@ assign them to entreeValue and drinkValue respectively.
 const testObj = {
     "an entree": "hamburger",
     "my side": "veggies",
-    "the drink": "water"
+    "the drink": "water",
+    "the dinner": "steak",
+
   };
 
   // Create code below 
   const entreeValue = testObj["an entree"];
   const drinkValue = testObj["the drink"];
+  const dinnerValue = testObj["a dinner"]
   
