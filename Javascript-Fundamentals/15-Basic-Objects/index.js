@@ -39,7 +39,6 @@ const cat = {
   as long as name is a string, <legs> and <tails> are numbers, and <friends> is an array.
   */
 
-
 const myDog = {
     name: "Trixie", 
     legs: 4, 
