@@ -46,3 +46,4 @@ const myDog = {
     friends: ["Tesi", "Messi", 3]
 
 }
+
