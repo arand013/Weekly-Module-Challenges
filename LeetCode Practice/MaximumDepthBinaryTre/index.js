@@ -33,7 +33,6 @@ Constraints:
 
 
 
-
 // ------------------------SOLUTION --------------------------------
  var maxDepth = function(root) {
     // Set Base Case 
@@ -51,6 +50,5 @@ Constraints:
     } else {
         depth += rightDepth
     }
-    return depth; 
-    
+    return depth;   
 };
