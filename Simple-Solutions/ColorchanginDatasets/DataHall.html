@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create a stacked bar chart with datasets stacked on top of each other with multiple colors, When the data reaches a certain threshold in Chart JS</title>
+    <style type="text/css">
+        .chartBox{
+            width:900px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chartBox">
+    <canvas id="myChart"></canvas>
+</div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        
+        const data = {
+      installedKva: 5900,
+      installedCabinets: 4376,
+      targetKva: 6200,
+      targetCabinets: 4476,
+      drawKva: 5761.00,
+      committedKva: 5873.33,
+      committedCabinets: 4224.00,
+      reservedKva: 126.00,
+      reservedCabinets: 23,
+      proposedKva: 581.96,
+      proposedCabinets: 53,
+      availableKva: -195.29,
+      availableCabinets: 629.50,
+      holdKva: 0,
+      holdCabinets: 636.50
+    }
+    let totals = {installedKva: 0, installedCabinets:0, targetKva:0, targetCabinets: 0, drawKva: 0, committedKva: 0, committedCabinets: 0, proposedKva: 0, proposedCabinets: 0, reservedKva: 0, reservedCabinets: 0, availableKva: 0, availableCabinets: 0, holdKva: 0, holdCabinets: 0 };
+
+    const backgroundColor = { drawPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]}, 
+  committedKvaPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]},
+  committedCabinetsPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]},
+  availableKvaPercentage: {order: 'asc', data: [[10, 'highlight-light-red', '#ff4f4f'], [20, 'highlight-light-orange', '#ffad5b'], [30, 'highlight-light-yellow', '#ffde7e'], [100, 'highlight-light-green', '#a5c971']]},
+  availableCabinetsPercentage: {order: 'asc', data: [[10, 'highlight-light-red', '#ff4f4f'], [20, 'highlight-light-orange', '#ffad5b'], [30, 'highlight-light-yellow', '#ffde7e'], [100, 'highlight-light-green', '#a5c971']]}};;
+
+//         { drawPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]}, 
+//   committedKvaPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]},
+//   committedCabinetsPercentage: {order: 'desc', data: [[85, 'highlight-light-red', '#ff4f4f'], [72.5, 'highlight-light-orange', '#ffad5b'], [60, 'highlight-light-yellow', '#ffde7e'], [0, 'highlight-light-green', '#a5c971']]},
+//   availableKvaPercentage: {order: 'asc', data: [[10, 'highlight-light-red', '#ff4f4f'], [20, 'highlight-light-orange', '#ffad5b'], [30, 'highlight-light-yellow', '#ffde7e'], [100, 'highlight-light-green', '#a5c971']]},
+//   availableCabinetsPercentage: {order: 'asc', data: [[10, 'highlight-light-red', '#ff4f4f'], [20, 'highlight-light-orange', '#ffad5b'], [30, 'highlight-light-yellow', '#ffde7e'], [100, 'highlight-light-green', '#a5c971']]}};
+
+        for(i = 0; i < data.length; i++){
+            totals.drawKva += data[i].data.drawKva;
+            totals.committedKva += data[i].data.committedKva;
+            totals.committedCabinets += data[i].data.committedCabinets;
+            totals.proposedKva += data[i].data.proposedKva;
+            totals.proposedCabinets += data[i].data.proposedCabinets;
+            totals.reservedKva += data[i].data.reservedKva;
+            totals.reservedCabinets += data[i].data.reservedCabinets;
+            totals.availableKva += data[i].data.availableKva;
+            totals.availableCabinets += data[i].data.availableCabinets;
+            totals.holdKva += data[i].data.holdKva;
+            totals.holdCabinets += data[i].data.holdCabinets;
+            totals.installedKva += data[i].data.installedKva;
+            totals.installedCabinets += data[i].data.installedCabinets;
+            totals.targetKva += data[i].data.targetKva;
+            totals.targetCabinets += data[i].data.targetCabinets;
+
+            data[i].data.drawPercentage = Number.isFinite(Math.abs(data[i].data.drawKva / data[i].data.installedKva)) ? Math.abs(data[i].data.drawKva / data[i].data.installedKva) * 100 : 0;
+            data[i].data.committedKvaPercentage = Number.isFinite(Math.abs(data[i].data.committedKva / data[i].data.targetKva)) ? Math.abs(data[i].data.committedKva / data[i].data.targetKva) * 100 : 0;
+            data[i].data.committedCabinetsPercentage = Number.isFinite(Math.abs(data[i].data.committedCabinets / data[i].data.installedCabinets)) ? Math.abs(data[i].data.committedCabinets / data[i].data.installedCabinets) * 100 : 0;
+            data[i].data.availableKvaPercentage = Number.isFinite(data[i].data.availableKva / data[i].data.targetKva) ? data[i].data.availableKva / data[i].data.targetKva * 100 : 0;
+            data[i].data.availableCabinetsPercentage = Number.isFinite(Math.abs(data[i].data.availableCabinets / data[i].data.targetCabinets)) ? Math.abs(data[i].data.availableCabinets / data[i].data.targetCabinets) * 100 : 0;
+
+            let ind = -1;
+
+            for (const [key, value] of Object.entries(data[i].data)) {
+//console.log(data[i].data.availableKva, data[i].data.targetKva, data[i].data.availableKvaPercentage);
+        const match = backgroundColor[key];
+
+        if(match) {
+          let bg = `${key}Background`;
+          data[i].data[bg] = returnColor(key,data[i].data[key],1);
+          for (var j = 0; j < match.data.length; j++) {
+            if(match.order === 'desc') {
+              if(value >= match.data[j][0] && (j <= ind || ind === -1)) {
+                ind = j;
+                data[i].coloColor = returnColor(key,value,2);
+              }
+            } else {
+              if(value <= match.data[j][0] && (j <= ind || ind === -1)) {
+                ind = j;
+                data[i].coloColor = returnColor(key,value,2);
+              }
+            }
+          }
+        }
+      }
+    
+            if(data < 40) { backgroundColor.push('#FF6347') }
+            if(data[i] >= 40 && data[i] < 70) { backgroundColor.push('#FF8C00') }
+            if(data[i] >= 71 && data[i] < 89) { backgroundColor.push('#FFD700') }
+            if(data[i] > 90) { backgroundColor.push('#2E8B57') }
+        }
+
+
+    const returnColor = (type,value,dataIndex) => {
+    const match = backgroundColor[type];
+    if(match) {
+      for (var i = 0; i < match.data.length; i++) {
+        if(match.order === 'desc') {
+          if(value >= match.data[i][0]) {
+            return match.data[i][dataIndex];
+          }
+        } else {
+          if(value <= match.data[i][0]) {
+            return match.data[i][dataIndex];
+          }          
+        }
+      }
+    }
+  }
+
+
+
+
+        
+        console.log(backgroundColor);
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+
+                datasets: [{
+                    label: 'Data Hall',
+                    data: data,
+                    backgroundColor: backgroundColor,
+                    borderColor: backgroundColor,
+                    borderWidth: 1
+                }]
+            }
+        });
+        </script>
+ 
+
+    
+</body>
+</html>
