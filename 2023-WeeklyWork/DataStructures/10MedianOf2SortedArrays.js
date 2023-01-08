@@ -39,38 +39,39 @@ Constraints:
 /*----------------------- SOLUTION  ----------------------  */
 
 var findMedianSortedArrays = function(nums1, nums2) {
-    let totalLen = nums1.length + nums2.length;
-    let idx1 = 0;
-    let idx2 = 0;
-    let curr;
-    let last;
-  
-    while (idx1 + idx2 <= totalLen/2) {
-      if (curr) {
-        last = curr;
-      }
-      let elOne = nums1[idx1];
-      let elTwo = nums2[idx2];
-      if (elOne === undefined) {
-        curr = elTwo;
-        idx2++;
-      } else if (elTwo === undefined) {
-        curr = elOne;
-        idx1++;
-      } else if (elOne < elTwo) {
-        curr = elOne;
-        idx1++;
-      } else {
-        curr = elTwo;
-        idx2++;
-      }
-    }
-    return totalLen % 2 === 0 ? (last + curr) / 2 : curr;
-  };
+    const n1 = nums1.length;
+    const n2 = nums2.length;
+    const nMid = (n1 + n2 + 1) / 2;
 
+    //  iterate through array1, if first number in array2 is less than the current value, move number to array 1
+    for (let i = 0; i < (n1 + n2); i++) {
+        const nums1curr = nums1[i];
+        while (nums2.length !== 0 && nums2[0] < nums1curr) {
+            nums1.splice(i, 0, nums2.shift());
+            i++
+        }
+    }
+    
+    //  after going through array1, if array1 is still less than halfway, then move an additional n numbers from array2 to array1
+    if (n1 < nMid) {
+        const numsToAdd = Math.ceil(nMid - n1);
+        for (let i = 0; i < numsToAdd; i++) {
+            const numToShift = nums2.shift();
+            nums1.push(numToShift)
+        }
+    }
+    
+    // nMid is an integer, get number directly
+    if ((n1 + n2) % 2 !== 0) {
+        return nums1[nMid - 1]
+    } else {
+        // otherwise nMid ends in .5, get mean of number above and below nMid
+        return (nums1[Math.floor(nMid) - 1] + nums1[Math.ceil(nMid) - 1]) / 2
+    }
+};
 /*------------------- END OF SOLUTION  -------------------  */
 
 /*
 Resources:
-https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/188312/fast-javascript/?q=javascript&orderBy=most_relevant 
-*/ 
+https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/458115/pragmatic-javascript-solution/?q=javascript&orderBy=most_relevant
+*/
