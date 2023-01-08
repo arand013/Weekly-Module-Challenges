@@ -1,6 +1,6 @@
 
 //                       QUESTION
-// 
+// https://leetcode.com/problems/get-maximum-in-generated-array/description/
 
 
 // You are given an integer [n]. A 0-indexed integer array [nums] of length [n + 1] is generated in the following way:
