@@ -51,17 +51,17 @@ return 132.1
 // Code
 function addSum() {
 
-    const arr = [1,2,3,4,5];
+  const arr = [1,2,3,4,5];
 
-    const arrSum = arr => arr.reduce((a,b) => a + b, 0)
+  const arrSum = arr => arr.reduce((a,b) => a + b, 0)
 
-const  getSum = (arr)=>{
-    let sum = 0;
-    for(key of arr){
-      sum += key
+  const  getSum = (arr)=>{
+      let sum = 0;
+      for(key of arr){
+        sum += key
+      }
+      return sum
     }
-    return sum
-  }
 
 };
 
