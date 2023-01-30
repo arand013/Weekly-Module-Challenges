@@ -41,8 +41,37 @@ Constraints:
 /*----------------------- SOLUTION  ----------------------  */
 
 function isMatrixMonotonic(matrix) {
-    /* your code here */
-   }
+    // These two loops form a typical row-major traversal
+    // over the matrix.
+    for (let r = 0; r < matrix.length; r++) {
+      for (let c = 0; c < matrix[r].length; c++) {
+  
+  
+        // Get the value at this location.
+        const value = matrix[r][c];
+  
+  
+        // If we are on a row past the first, then
+        // look up one position and make sure that value
+        // is not larger.
+        if (r > 0 && matrix[r - 1][c] > value) {
+          return false;
+        }
+  
+  
+        // If we are on a column past the first, then
+        // look left one position and make sure that value
+        // is not larger.
+        if (c > 0 && matrix[r][c - 1] > value) {
+          return false;
+        }
+      }
+    }
+  
+  
+    // If we didn't find any problems, then return true.
+    return true;
+  }
 /*------------------- END OF SOLUTION  -------------------  */
   
   /* */

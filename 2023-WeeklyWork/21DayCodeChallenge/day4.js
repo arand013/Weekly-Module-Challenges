@@ -50,6 +50,10 @@ function isToeplitz(matrix) {
       }
     } 
 }  
+console.log(isToeplitz([ 1, 2, 3, 4,
+    5, 1, 2, 3,
+    6, 5, 1, 2,
+    7, 6, 5, 1,]))
   
 /*------------------- END OF SOLUTION  -------------------  */
   
