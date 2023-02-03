@@ -42,11 +42,39 @@ Constraints:
   * }
   */
  
- function tree2list(root) {
-    /* your code here */
+function tree2list(root, listTail = null) {
+  if (!root) return listTail;
 
-    
+
+  // First, we're looking for the last node, so we're going
+  // as far right as we can.
+  if (root.right) {
+    listTail = tree2list(root.right, listTail);
   }
+
+
+  // If there is no right node, then this is the last one
+  // in the in-order traversal, so prepend that to the tail
+  // of the list and that node is now the head.
+  let listHead = root;
+  listHead.right = listTail;
+  if (listTail) {
+    listTail.left = listHead;
+  }
+
+
+  // Now look at the left subtree and pass in the list
+  // we've created so far.
+  if (root.left) {
+    listHead = tree2list(root.left, listHead);
+  }
+
+
+  // Return the list as we've built it up to this point.
+  return listHead;
+}
+
+
 
 
 /*------------------- END OF SOLUTION  -------------------  */
