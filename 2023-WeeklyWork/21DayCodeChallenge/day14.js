@@ -42,7 +42,7 @@ Constraints:
 function generatePassword(characters, minlength, maxlength) {
     /* your code here */
   }
-  
+
     /*------------------- END OF SOLUTION  -------------------  */
       
       /* */
@@ -53,3 +53,4 @@ function generatePassword(characters, minlength, maxlength) {
       
       --------------------------------------------------------------------------
       */ 
+     
