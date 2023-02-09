@@ -64,11 +64,13 @@ console.log(numberChecker(49));
 * e = the sum of the previous four variables
 */
 function variables() {
+
 let f = 1+8;
 let g = 22 * 3;
 let c = 5 % 4;
 let d = f - 17;
 let e = f + g + c + d;
 
-
+return console.log(f, g, c, d, e);
 }
+variables();
