@@ -133,3 +133,30 @@ function multiply( x , y ) {
 // ANSWERS
 parseInt(multiply("c", 10))
 // parseInt(multiply(10, 10)) 
+
+/*
+Write a function called capitalize that takes a string and 
+returns that string with only the first letter capitalized. 
+
+Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.?
+*/
+
+function capitalize( x, y ) {
+
+	const string1 = x.charAt(0).toUpperCase();
+	const string2 = x.slice(1);
+	const both = string1 + string2;
+
+	return console.log(both)
+}
+capitalize("first");
+
+
+/*
+Write a function called lastLetter that takes a string and 
+returns the very last letter of that string:
+
+Ex: lastLetter("abcd") should return "d"
+
+ex: lastLetter("abcd") should return "d"
+*/
