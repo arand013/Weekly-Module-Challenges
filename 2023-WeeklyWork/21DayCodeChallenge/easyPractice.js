@@ -122,3 +122,14 @@ Write a function called add7 that takes one number and returns that number + 7?
 add7("X")
 add7("20")
 add7(1)
+
+/*
+Write a function called multiply that takes 2 numbers and returns their product?
+*/
+function multiply( x , y ) {
+	let mutiplyIt = x * y
+	return console.log(mutiplyIt)
+}
+// ANSWERS
+parseInt(multiply("c", 10))
+// parseInt(multiply(10, 10))
