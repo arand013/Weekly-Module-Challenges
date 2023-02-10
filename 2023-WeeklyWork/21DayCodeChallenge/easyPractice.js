@@ -103,3 +103,22 @@ print the greeting with console.log
 		return console.log(greeting)
 	}
 theGreeting()
+
+
+// ===================================================================================================
+// ===================================================================================================
+// ===================================================================================================
+
+/*
+Write a function called add7 that takes one number and returns that number + 7?
+*/
+	function add7(x) {
+		let add =  parseInt(x)+ 7
+
+		return console.log(add)
+ }
+ 
+// ANSWERS
+add7("X")
+add7("20")
+add7(1)
