@@ -157,6 +157,26 @@ Write a function called lastLetter that takes a string and
 returns the very last letter of that string:
 
 Ex: lastLetter("abcd") should return "d"
-
-ex: lastLetter("abcd") should return "d"
 */
+
+function lastLetter(word){
+	let slicedLetter = word.slice(-1);
+	console.log(slicedLetter);
+	return slicedLetter;
+}
+ lastLetter("giveN");
+
+// Write a funtion then change tht function into a shorter version using ( ? )  operator &  ( : )  
+// ex: ( (if statement) ? ( 1st value ) : ( or 2nd value ) )
+
+function verifyAge(age){
+	if( age > 18) {
+		return true
+	} else return alert("Age must be between"); 
+}
+function checkAge(age) {
+	return (age  > 18) ? true : "Sorry your not old enough";
+}
+
+console.log(checkAge(19));
+console.log(checkAge(10));
