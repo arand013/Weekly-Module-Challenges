@@ -27,7 +27,6 @@ Output:
 
 */
 
-    
 /*
 Constraints:    
 
