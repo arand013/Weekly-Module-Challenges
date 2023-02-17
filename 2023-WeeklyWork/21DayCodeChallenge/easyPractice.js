@@ -180,3 +180,24 @@ function checkAge(age) {
 
 console.log(checkAge(19));
 console.log(checkAge(10));
+
+
+// ===================================================================================================
+// ===================================================================================================
+// ===================================================================================================
+
+// Create Functions below. 
+// helloWorld (This exercise is intentionally very simple to ensure that you have set up everything properly!)
+function helloWorld(){
+	const hello = "Welcome to Your World";
+	return hello
+}
+console.log(helloWorld())
+
+
+// repeatString
+// reverseString
+// removeFromArray
+// sumAll
+// leapYears
+// tempConversion
