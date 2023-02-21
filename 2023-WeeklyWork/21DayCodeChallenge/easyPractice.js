@@ -194,7 +194,12 @@ function helloWorld(){
 }
 console.log(helloWorld())
 
+function repeatString(word) {
 
+	const string = " "; 
+	for( let i )
+	
+}
 // repeatString
 // reverseString
 // removeFromArray
