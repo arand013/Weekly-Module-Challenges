@@ -194,15 +194,19 @@ function helloWorld(){
 }
 console.log(helloWorld())
 
-function repeatString(word) {
+function repeatString(word, times ) {
 
 	const string = " "; 
-	for( let i )
-	
+	for( let i = 0; i < times; i++){
+		string += word;
+	}
+	return string
 }
+console.log(repeatString())
 // repeatString
 // reverseString
 // removeFromArray
 // sumAll
 // leapYears
 // tempConversion
+
