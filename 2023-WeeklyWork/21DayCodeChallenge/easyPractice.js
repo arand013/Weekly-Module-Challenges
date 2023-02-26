@@ -205,6 +205,19 @@ function repeatString(word, times ) {
 console.log(repeatString())
 // repeatString
 // reverseString
+
+function reverserString(string){
+
+	let newString = ""; 
+	for(let i = string.length - 1; i >=0; i--) {
+		newString += string[i];
+	}
+
+	return newString;
+}
+console.log(reverserString("BananaBoy"));
+
+
 // removeFromArray
 // sumAll
 // leapYears
