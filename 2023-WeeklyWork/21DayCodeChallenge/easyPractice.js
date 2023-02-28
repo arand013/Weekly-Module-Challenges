@@ -219,15 +219,21 @@ console.log(reverserString("BananaBoy"));
 
 
 // removeFromArray
+// Implement a function that takes an array and 
+// some other arguments then removes the other arguments from that array:
 
-function removeFromArray(array) {
+function removeFromArray(array, ...args) {
 	let newArray = [];
 
-	//for loop
+	//forEach
+	array.forEach((item) => {
+
+		if(!args.includes(item)){
+			newArray.push(item);
+		}
+	})
 
 	return newArray; 
-
-
 }
 // sumAll
 // leapYears
