@@ -196,20 +196,22 @@ console.log(helloWorld())
 
 function repeatString(word, times ) {
 
-	const string = " "; 
+	if( times < 0) return 'ERROR'
+
+	let string = ''; 
 	for( let i = 0; i < times; i++){
 		string += word;
 	}
 	return string
 }
-console.log(repeatString())
+console.log(repeatString("Keep Pushing & LETS FCKIN WIN ! !", 3))
 // repeatString
 // reverseString
 
 function reverserString(string){
 
 	let newString = ""; 
-	for(let i = string.length - 1; i >=0; i--) {
+	for(let i = string.length - 1; i >= 0; i--) {
 		newString += string[i];
 	}
 
