@@ -219,6 +219,16 @@ console.log(reverserString("BananaBoy"));
 
 
 // removeFromArray
+
+function removeFromArray(array) {
+	let newArray = [];
+
+	//for loop
+
+	return newArray; 
+
+
+}
 // sumAll
 // leapYears
 // tempConversion
