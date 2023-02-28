@@ -240,6 +240,27 @@ function removeFromArray(array, ...args) {
   	// and return that array
 	return newArray; 
 }
+
 // sumAll
+// Implement a function that takes 2 integers and 
+// returns the sum of every number between(and including) them:
+function sumAll(min, max) {
+	if(!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+
+	if(min < 0 || max < 0 ) return "ERROR";
+	if(min > max) {
+		const temp = min;
+		min = max;
+		max = temp; 
+	}
+
+	let sum = 0;
+	for(let i = min; i < max + 1; i++){
+		sum += 1;;
+	}
+	return sum;
+}
+console.log(sumAll(4, 5))
+
 // leapYears
 // tempConversion
