@@ -263,4 +263,15 @@ function sumAll(min, max) {
 console.log(sumAll(4, 5))
 
 // leapYears
+
+/*
+Create a function that determines whether or not a given year 
+is a leap year. Leap years are determined by the following rules:
+
+Hint: use an if statement and && to make sure all the conditions are met properly
+*/
+
+function leapYear (){
+
+}
 // tempConversion
