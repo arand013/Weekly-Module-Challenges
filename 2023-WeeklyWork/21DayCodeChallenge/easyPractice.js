@@ -271,7 +271,10 @@ is a leap year. Leap years are determined by the following rules:
 Hint: use an if statement and && to make sure all the conditions are met properly
 */
 
-function leapYear (){
+function leapYear (year){
+	return year % 4 === 0 && ( year % 100 != 0 || year % 400 === 0) 
 
 }
+
+console.log(leapYear(2000))
 // tempConversion
