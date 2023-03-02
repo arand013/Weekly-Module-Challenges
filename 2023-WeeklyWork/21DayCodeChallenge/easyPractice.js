@@ -291,3 +291,9 @@ function tempConversionCelsius (temp){
 console.log(tempConversionCelsius(10))
 
 
+function tempConversionFarenheit (temp){ 
+	return Math.round(((temp -32 ) / 1.8 )); 
+
+}
+console.log(tempConversionFarenheit(50))
+
