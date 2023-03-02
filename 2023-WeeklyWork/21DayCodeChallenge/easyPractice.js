@@ -277,4 +277,17 @@ function leapYear (year){
 }
 
 console.log(leapYear(2000))
+
 // tempConversion
+/*
+Write two functions that convert temperatures 
+from Fahrenheit to Celsius, and vice versa:
+*/
+
+function tempConversionCelsius (temp){
+	return Math.round(((temp * 1.8) + 32) ); 
+
+}
+console.log(tempConversionCelsius(10))
+
+
