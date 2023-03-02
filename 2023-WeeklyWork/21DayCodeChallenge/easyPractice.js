@@ -190,7 +190,7 @@ console.log(checkAge(10));
 // helloWorld (This exercise is intentionally very simple to ensure that you have set up everything properly!)
 function helloWorld(){
 	const hello = "Welcome to Your World";
-	return hello
+	return hello;
 }
 console.log(helloWorld())
 
