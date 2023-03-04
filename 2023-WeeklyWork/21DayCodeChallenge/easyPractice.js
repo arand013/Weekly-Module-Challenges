@@ -118,6 +118,7 @@ Write a function called add7 that takes one number and returns that number + 7?
 		return console.log(add)
  }
  
+ 
 // ANSWERS
 add7("X")
 add7("20")
