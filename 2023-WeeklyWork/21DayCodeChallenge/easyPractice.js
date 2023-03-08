@@ -123,6 +123,7 @@ add7("X")
 add7("20")
 add7(1)
 
+
 /*
 Write a function called multiply that takes 2 numbers and returns their product?
 */
@@ -296,4 +297,3 @@ function tempConversionFarenheit (temp){
 
 }
 console.log(tempConversionFarenheit(50))
-
