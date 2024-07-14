@@ -1,16 +1,23 @@
 -- 1266. Minimum Time Visiting All Points -- 
-https://leetcode.com/problems/minimum-time-visiting-all-points/ 
+https://leetcode.com/problems/check-if-n-and-its-double-exist/description/
 
 -- 
 
 Q: 
-On a 2D plane, there are n points with integer coordinates points[i] = [xi, yi]. Return the minimum time in seconds to visit all the points in the order given by points.
+Given an array arr of integers, check if there exist two indices i and j such that :
 
-You can move according to these rules:
+i != j
+0 <= i, j < arr.length
+arr[i] == 2 * arr[j]
 
-In 1 second, you can either:
-move vertically by one unit,
-move horizontally by one unit, or
-move diagonally sqrt(2) units (in other words, move one unit vertically then one unit horizontally in 1 second).
-You have to visit the points in the same order as they appear in the array.
-You are allowed to pass through points that appear later in the order, but these do not count as visits.
+
+Example 1:
+
+Input: arr = [10,2,5,3]
+Output: true
+Explanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]
+Example 2:
+
+Input: arr = [3,1,7,11]
+Output: false
+Explanation: There is no i and j that satisfy the conditions.
