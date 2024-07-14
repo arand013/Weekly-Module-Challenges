@@ -8,7 +8,7 @@
     <title>Changing Color Background</title>
     <style>
         body {
-            background-color: #a8d0c1;
+            background-color: #ea8e89;
             transition: background-color 3s ease-in-out;
         }
     </style>
@@ -17,17 +17,19 @@
 <body>
     <script>
         function changeBackgroundColor() {
-            const colors = ["#a8d0c1", "#d0a8a8", "#d0cda8", "#8d0000"];
-            const currentColor = 0;
+            const colors = ["#a8d0c1", "#b3e16a", "#d3c49d", "#e9aa80", "#ea8e89"];
+            let currentColor = 0;
             setInterval(() => {
                 document.body.style.background = colors[currentColor];
                 currentColor++;
                 if (currentColor === colors.length) {
                     currentColor = 0;
                 }
-            }, 10);
+            }, 1500);
         }
+        console.log("ALL GOOD HERE")
         changeBackgroundColor();
+        console.log("ALL GOOD HERE AGAIN")
     </script>
 </body>
 

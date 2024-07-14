@@ -23,7 +23,7 @@ var checkIfExist = function(arr) {
 
 
  // Define a function named checkIfExist that takes an array as input
-var checkIfExist = function(arr) {
+function checkIfExist(arr) {
 
     // Initialize a loop that will iterate over each element in the array
     for (let i = 0; i < arr.length; i++) {
