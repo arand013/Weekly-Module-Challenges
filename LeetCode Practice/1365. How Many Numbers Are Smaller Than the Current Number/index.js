@@ -15,6 +15,16 @@ function smallerNumbersThanCurrent(nums) {
     return result;
 }
 
+// My initial thinking: 
+/* create a loop to iterare through all conditions
+    // Create an empty array
+
+    // At a given index in an array, iterate through the rest of the array to count which numbers in the array are less the value of the current number: 
+
+    // return the new array for each index position, in the same position of the index of the new count of numbers that are less that than the original value. 
+*/ 
+// End of initial thinking: Below is commented descriptive code for explanation. 
+
 
 
 function smallerNumbersThanCurrent(nums) {
