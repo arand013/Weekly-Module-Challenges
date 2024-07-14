@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR LOOPS</title>
+</head>
+
+<body>
+
+    <h1 align="center"> Understanding for loops </h1>
+
+    <h2 align="center"> Example 1: </h2>
+
+    <h3 align="center" ;> A for loop is a loop that runs code a certain number of times over and over again. </h3>
+
+    <p id="demo">
+
+        <script>
+            let text = " "
+            for (let i = 1; i <= 5; i++) {
+                text += `[${i}] ` + " LESSON " + `${i}.1` + "<br>";
+            }
+            document.getElementById("demo").innerHTML = (text);
+        </script>
+
+    </p>
+
+</body>
+
+<style>
+    body {
+        background: linear-gradient(to top left, hsl(0, 6%, 88%), hsl(261, 29%, 80%));
+    }
+
+    #demo {
+        margin: 50px;
+        border-radius: 12px;
+        padding: 90px;
+        background: linear-gradient(to bottom right, hsl(205, 54%, 77%), hsl(200, 50%, 52%));
+        box-shadow: rgb(30, 88, 158) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    h3 {
+        font-family: fantasy, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 24px;
+    }
+</style>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create a stacked bar chart with datasets stacked on top of each other with multiple colors, When the data reaches a certain threshold in Chart JS</title>
+    <style type="text/css">
+        .chartBox{
+            width:900px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chartBox">
+    <canvas id="myChart"></canvas>
+</div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        
+        const data = [30, 50, 95, 85, 60, 96];
+        const backgroundColor = [];
+
+        for(i = 0; i < data.length; i++){
+            if(data[i] < 40) { backgroundColor.push('#e63757') }
+            if(data[i] >= 40 && data[i] < 70) { backgroundColor.push('#fd7e14') }
+            if(data[i] >= 71 && data[i] < 89) { backgroundColor.push('#f6c343') }
+            if(data[i] > 90) { backgroundColor.push('#00a85f') }
+        }
+        console.log(backgroundColor);
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Orange', 'Green', 'Yellow', 'Orange', 'Green'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: data,
+                    backgroundColor: backgroundColor,
+                    borderColor: backgroundColor,
+                    borderWidth: 1
+                }]
+            }
+        });
+        </script>
+ 
+
+    
+</body>
+</html>

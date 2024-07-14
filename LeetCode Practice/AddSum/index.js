@@ -51,22 +51,21 @@ return 132.1
 // Code
 function addSum() {
 
-    const arr = [1,2,3,4,5];
+  const arr = [1,2,3,4,5];
 
-    const arrSum = arr => arr.reduce((a,b) => a + b, 0)
+  const arrSum = arr => arr.reduce((a,b) => a + b, 0)
 
-const  getSum = (arr)=>{
-    let sum = 0;
-    for(key of arr){
-      sum += key
+  const  getSum = (arr)=>{
+      let sum = 0;
+      for(key of arr){
+        sum += key
+      }
+      return sum
     }
-    return sum
-  }
 
 };
 
 console.log(addSum());
-
 
 
 
@@ -78,3 +77,46 @@ console.log(addSum());
 
 //Write a test (obj is test object)
 
+var largestDivisibleSubset = function(nums) { 
+  // Check if the input array is empty, if so return an empty array
+  if(!nums.length) return []; 
+
+  // Sort the input array in ascending order
+  nums.sort((a, b) => a - b);
+
+  // Create a dynamic programming table to store the length and previous index of each subset
+  const dp = Array.from({length:nums.length}, () => ({prev:null, len:1}));
+
+  // Initialize variables to store the maximum length and index of the largest divisible subset
+  let maxVal = 0, maxIdx = 0, result = [];
+
+  // Iterate through the sorted array to build the dynamic programming table
+  for(let i = 1; i < nums.length; i++) {
+      let pre = 0;
+      // Iterate through previous elements to find the largest divisible subset ending at current index
+      while(pre < i) {
+          // Check if current element is divisible by previous element and can extend the subset length
+          if(nums[i]%nums[pre] === 0 && dp[pre].len+1 > dp[i].len) {
+              // Update the dynamic programming table with the new subset length and previous index
+              dp[i].len = dp[pre].len + 1;
+              dp[i].prev = pre;
+              // Update the maximum length and index if a larger subset is found
+              if(dp[i].len > maxVal) {
+                  maxVal = dp[i].len;
+                  maxIdx = i;
+              }
+          }
+          pre++;
+      }
+  }
+
+  // Backtrack from the maximum index to build the largest divisible subset
+  let curr = maxIdx;
+  while(curr !== null) {
+      result.push(nums[curr]);
+      curr = dp[curr].prev;
+  }
+
+  // Return the largest divisible subset
+  return result;
+};
