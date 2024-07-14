@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         
@@ -7,7 +8,6 @@ class Solution:
                     return True
         return False
     
-
 class SolutionWComments:
     def checkIfExist(self, arr: List[int]) -> bool:
         # Iterate through each element in the array
