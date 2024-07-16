@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class replaceElements {
-    public int[] replaceElements(int[] arr) { 
+    public int[] replaceElement(int[] arr) { 
         // Create a new array to store the result, initialized with -1
         final int[] result = new int[arr.length]; 
         Arrays.fill(result, -1); 
@@ -21,7 +21,7 @@ public class replaceElements {
     public static void main(String[] args) {
         replaceElements solution = new replaceElements();
         int[] arr = {17, 18, 5, 4, 6, 1, 16};
-        int[] result = solution.replaceElements(arr);
+        int[] result = solution.replaceElement(arr);
         for (int i : result) {
             System.out.print(i + " ");
         }
