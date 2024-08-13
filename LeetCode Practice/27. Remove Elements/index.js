@@ -3,6 +3,9 @@
  * @param {number} val
  * @return {number}
  */
+
+// https://leetcode.com/problems/remove-element/submissions/1353348014/ 
+
 var removeElement = function(nums, val) {
 
     // Setup variables, Count = k 

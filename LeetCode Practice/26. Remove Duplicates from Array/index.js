@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/1353348285/ 
+
 var removeDuplicates = function(nums) {
 
     // Setup variable with a count
