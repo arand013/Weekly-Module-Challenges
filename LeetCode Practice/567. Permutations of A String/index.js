@@ -1,7 +1,5 @@
 // https://leetcode.com/problems/permutation-in-string/
 
-// Q: 
-
 /**
  * @param {string} s1
  * @param {string} s2
