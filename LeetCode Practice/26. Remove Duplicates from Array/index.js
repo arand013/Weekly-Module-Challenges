@@ -22,3 +22,5 @@ var removeDuplicates = function(nums) {
     return count
     
 };
+
+console.log(removeDuplicates([1,1,1,1,1,2]))

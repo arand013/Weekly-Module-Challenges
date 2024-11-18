@@ -54,6 +54,42 @@
 // ------------------------------ //
             // START CODE //
 
+    function fibSpace(n) {
+        let prev2 = 0;
+        let prev1 = 1;
+        let curr;
+        
+        if (n <= 1) return n;
+        
+        for (let i = 2; i <= n; i++) {
+            curr = prev1 + prev2;
+            // Shifting
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return curr;
+        }
+
+/*
+Time Complexity: O(n)
+
+Therefore, the time complexity is proportional to the number of iterations, which is n.
+Space Complexity: O(1)
+
+The function uses a constant amount of memory to store the prev2, prev1, and curr variables.
+These variables
+*/ 
+
+
+
+
+
+
+
+
+
+
+
 
 // UNDERSTAND
 // - This is a dynamic programming question Involving ( RECURSION )
