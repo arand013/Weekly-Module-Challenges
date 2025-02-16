@@ -16,7 +16,7 @@
     Input: head = [1,2]
     Output: [2,1]
 
-
+≠
     EXAMPLE 3: 
     Input: head = []
     Output: []                                              */
@@ -24,21 +24,21 @@
 
 /*                      SOLUTION                            */
 
-var reverseList = function(head) {
+var reverseList = function (head) {
     if (!head) return head;
-    
+
     let node = head;
     let nextNode = head.next;
-    
+
     node.next = null;
 
     while (nextNode) {
         const nextNextNode = nextNode.next;
-		nextNode.next = node;
+        nextNode.next = node;
         node = nextNode;
         nextNode = nextNextNode;
     }
-    
+
     return node;
 };
 
@@ -85,7 +85,7 @@ var reverseList = function(head) {
 
     while (nextNode) {
         const nextNextNode = nextNode.next;
-		nextNode.next = node;
+        nextNode.next = node;
         node = nextNode;
         nextNode = nextNextNode;
     }
