@@ -2,6 +2,7 @@
 
 # Assignment 7: 
 
+# Part A: Create class NeuralNetwork():
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -50,19 +51,22 @@ class NeuralNetwork(object):
         plot_cost_func(cost_func, num_train_iterations)
 
                 # predicting the cla
-                # 
+                #
                 # sses of new data points
     def pred(self, inputs):
         prob = self.forward_propagation(inputs)
         preds = np.int8(prob >= 0.5)
         return preds
 
+
+# Part B: Use the gradient descent rule to train a single neuron on the datapoints given below:
+
 def plot_cost_func(J, iterations):
     # plotting the learning curve
     x = np.arange(iterations, dtype=int)
     y = J
     plt.plot(x,y)
-    plt.axis([-1,x.shape[0]+1,-1,np.max(y)+1])
+    # plt.axis([-1,x.shape[0]+1,-1,np.max(y)+1])
     plt.title('Learning curve')
     plt.xlabel('X: Iteration number')
     plt.ylabel('Y: J(0)')
@@ -90,12 +94,13 @@ def plot_fun_thr(features, labels, thre_parms, classes):
     plt.ylabel('Y: feature 2')
     plt.legend(['Class '+str(classes[0]), 'Class '+str(classes[1])])
     plt.show()
+t
     
 # Separate block ------------------------------------------------------------
 
 # Create sample data
-features = np.array([[0,0], [0,1], [1,0], [1,1]])
-labels = np.array([0,0,0,1])
+features = np.array([[1,1], [1,0], [0,1], [0.5,-1],[0.5,3], [0.7,2], [-1,0], [-1,1],[2,0], [0,0]])
+labels = np.array([1,1,0,0,1,1,0,0,1,0])
 classes = [0,1]
 
 # Plot the initial data
@@ -121,7 +126,7 @@ print('Random weights at the start of training:')
 print(neural_network.weight_matrix)
 
 # Train using gradient descent learning
-neural_network.train_GDL(features, np.expand_dims(labels, axis=1), 10)
+neural_network.train_GDL(features, np.expand_dims(labels, axis=1), 50)
 
 print('New weights after training:')
 print(neural_network.weight_matrix)
@@ -133,3 +138,19 @@ print(neural_network.pred(features))
 # Test the neural network with a new data point
 print('Testing network on new examples ->')
 print(neural_network.pred(np.array([[1, 1, 1]])))
+
+# Test different learning rates
+learning_rates = [1, 0.5, 0.1, 0.001]
+
+plt.figure(figsize=(15, 10))
+for rate in learning_rates:
+    # Create and train neural network with current learning rate
+    neural_network = NeuralNetwork()
+    neural_network.l_rate = rate
+    print(f'\nTraining with learning rate = {rate}')
+    neural_network.train_GDL(features, np.expand_dims(labels, axis=1), 100)
+    
+    print('Final weights:')
+    print(neural_network.weight_matrix)
+    print('Predictions:')
+    print(neural_network.pred(features))
